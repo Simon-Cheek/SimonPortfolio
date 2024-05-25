@@ -1,6 +1,10 @@
 /** @jsxImportSource @emotion/react */
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { css } from '@emotion/react';
 import { colors } from './styles/colors';
+
+import { Header } from './components/Header';
+import Button from 'react-bootstrap/Button';
 
 const pStyle = css`
   color: ${colors.blue};
@@ -12,20 +16,8 @@ const color = 'white';
 function App() {
   return (
     <>
-      <p css={pStyle}>{colors.blue}</p>
-      <div
-        css={css`
-          padding: 32px;
-          background-color: hotpink;
-          font-size: 24px;
-          border-radius: 4px;
-          &:hover {
-            color: ${color};
-          }
-        `}
-      >
-        Hover to change color.
-      </div>
+      <Header />
+
     </>
   );
 }

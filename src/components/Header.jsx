@@ -1,13 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { colors } from './styles/colors';
+import { colors } from '../styles/colors';
 
 const color = 'white';
 
-function Header() {
+export function Header() {
     return (
         <>
-            <p css={pStyle}>{colors.blue}</p>
             <div
                 css={css`
           padding: 32px;
@@ -19,10 +18,10 @@ function Header() {
           }
         `}
             >
-                Hover to change color.
+                Header Component
             </div>
         </>
     );
 }
 
-export default App;
+export default Header;
