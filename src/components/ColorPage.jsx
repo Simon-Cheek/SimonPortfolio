@@ -1,47 +1,47 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { colors } from '../styles/colors';
-import { Col, Container, Row } from 'react-bootstrap';
 
 
 export function ColorPage() {
 
+    const containerStyle = css`
+        display: grid;
+        grid-template-columns: minmax(100px, 300px) auto;
+        grid-gap: 16px;
+    `;
+
+    const divStyle = css`
+        display: flex;
+        flex-direction: horizontal;
+        align-items: center;
+        margin: 32px 0;
+    `;
+
     const blockStyle = css`
-        display: block;
         width: 100px;
         height: 50px;
-        margin-bottom: 32px;
-        box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
-    `
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+        border-radius: 12px;
+    `;
 
-    const colorEntries = Object.entries(colors)
-
-
+    const colorEntries = Object.entries(colors);
 
 
     return (
-        <Container>
-            <h1>Colors</h1>
-            {colorEntries.map(([key, value], index) => (
-                index % 2 === 0 ? (
-                    <Row key={index}>
-                        <Col xs={6} lg={2}>
-                            <div>
-                                <p>{`${key}: ${value}`}</p>
-                                <div css={[blockStyle, css`background-color: ${value}`]}></div>
-                            </div>
-                        </Col>
-                        {colorEntries[index + 1] && (
-                            <Col xs={6} lg={2}>
-                                <p>{`${colorEntries[index + 1][0]}: ${colorEntries[index + 1][1]}`}</p>
-                                <div css={[blockStyle, css`background-color: ${colorEntries[index + 1][1]}`]}></div>
-                            </Col>
-                        )}
-                    </Row>
-                ) : null
-            ))}
-        </Container>
-    );
+        <>
+            <h1>Colors:</h1>
+            <div css={containerStyle}>
+                {colorEntries.map(([key, value]) => (
+                    <div css={divStyle} key={key}>
+                        <p css={css`margin: 0 12px;`}>{`${key}: ${value}`}</p>
+                        <div css={[blockStyle, css`background-color: ${value};`]}></div>
+                    </div>
+                ))}
+            </div>
+        </>
+
+    )
 }
 
 
