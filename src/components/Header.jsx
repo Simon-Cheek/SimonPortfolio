@@ -9,12 +9,12 @@ const pStyle = css`
 
 const color = 'white';
 
-function App() {
-  return (
-    <>
-      <p css={pStyle}>{colors.blue}</p>
-      <div
-        css={css`
+function Header() {
+    return (
+        <>
+            <p css={pStyle}>{colors.blue}</p>
+            <div
+                css={css`
           padding: 32px;
           background-color: hotpink;
           font-size: 24px;
@@ -23,11 +23,11 @@ function App() {
             color: ${color};
           }
         `}
-      >
-        Hover to change color.
-      </div>
-    </>
-  );
+            >
+                Hover to change color.
+            </div>
+        </>
+    );
 }
 
 export default App;
