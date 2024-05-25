@@ -3,11 +3,11 @@ export const colors = {
     // Colors go from their Darkest Variants to their Lightest
 
     blue00: "",
-    blue01: "",
+    blue01: "#0D3A7D",
     blue02: "",
     blue03: "",
     blue04: "",
-    blue05: "",
+    blue05: "#73A8F6",
     blue06: "",
     blue07: "",
 

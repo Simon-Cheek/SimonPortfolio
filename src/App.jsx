@@ -4,7 +4,9 @@ import { css } from '@emotion/react';
 import { colors } from './styles/colors';
 
 import { Header } from './components/Header';
-import Button from 'react-bootstrap/Button';
+import ColorPage from './components/ColorPage';
+import { Container } from 'react-bootstrap';
+
 
 const pStyle = css`
   color: ${colors.blue};
@@ -17,6 +19,9 @@ function App() {
   return (
     <>
       <Header />
+      <Container fluid>
+        <ColorPage />
+      </Container>
 
     </>
   );
