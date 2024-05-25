@@ -2,11 +2,6 @@
 import { css } from '@emotion/react';
 import { colors } from './styles/colors';
 
-const pStyle = css`
-  color: ${colors.blue};
-  font-size: 30px;
-`;
-
 const color = 'white';
 
 function Header() {
