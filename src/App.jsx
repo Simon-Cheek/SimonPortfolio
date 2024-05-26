@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from './components/Header';
 import ColorPage from './components/ColorPage';
-import { Paragraph } from './components/Text';
+import { H1, H2, H3, H4, H5, H6, Paragraph } from './components/Text';
 
 
 
@@ -15,6 +15,12 @@ function App() {
     <>
       <Header />
       <Paragraph>Will this work???</Paragraph>
+      <H1>This is H1</H1>
+      <H2>This is H2</H2>
+      <H3>This is H3</H3>
+      <H4>This is H4</H4>
+      <H5>This is H5</H5>
+      <H6>This is H6</H6>
 
       <BrowserRouter>
         <Routes>
