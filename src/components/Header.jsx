@@ -4,7 +4,7 @@ import { colors } from '../styles/colors';
 
 const color = 'white';
 
-export function Header() {
+function Header() {
     return (
         <>
             <div
