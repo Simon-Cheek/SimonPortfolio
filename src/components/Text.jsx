@@ -76,7 +76,7 @@ export function H4({ children }) {
     font-family: "Montserrat", sans-serif;
     font-size: 1.5em;
     font-weight: 700;
-    margin: 4x 4px;
+    margin: 4px 4px;
     padding: 4px 0;
   `
 
@@ -93,7 +93,7 @@ export function H5({ children }) {
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     font-weight: 700;
-    margin: 0x 4px;
+    margin: 0 4px;
     padding: 4px 0;
   `
 
