@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
 import ColorPage from './components/ColorPage';
 import { H1, H2, H3, H4, H5, H6, Paragraph } from './components/Text';
+import Btn from './components/Button';
 
 
 
@@ -21,6 +22,8 @@ function App() {
       <H4>This is H4</H4>
       <H5>This is H5</H5>
       <H6>This is H6</H6>
+
+      <Btn color="blue" shade="dark" gradient>This is a Button custom!</Btn>
 
       <BrowserRouter>
         <Routes>
