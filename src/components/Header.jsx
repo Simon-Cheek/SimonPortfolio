@@ -2,6 +2,7 @@
 import { css } from '@emotion/react';
 import { colors } from '../styles/colors';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import Btn from './Button';
 
 
 function Header() {
@@ -30,22 +31,23 @@ function Header() {
   const pushRight = css`
     display: flex !important;
     justify-content: flex-end !important;
+    align-items: center !important;
     flex-basis: 100% !important;
   `
 
 
   return (
     <>
-      <Navbar expand="md" className="bg-body-tertiary" fixed="top" css={navbarStyle}>
+      <Navbar expand="md" className="bg-body-tertiary" fixed="top" variant="dark" css={navbarStyle}>
         <Container fluid>
           <Navbar.Brand href="/" css={[navbarText, navbarHead]}>Portfolio</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto" css={pushRight}>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" css={css`border-width: 3px;`} />
+          <Navbar.Collapse id="basic-navbar-nav" >
+            <Nav className="me-auto" css={pushRight} >
               <Nav.Link href="/about" css={navbarText}>About</Nav.Link>
               <Nav.Link href="/music" css={navbarText}>Music</Nav.Link>
               <Nav.Link href="/software" css={navbarText}>Software</Nav.Link>
-              <Nav.Link href="/contact" css={navbarText}>Contact</Nav.Link>
+              <Nav.Link href="/contact" css={navbarText}><Btn shade="light" color="blue" gradient>Contact</Btn></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

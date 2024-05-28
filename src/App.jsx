@@ -23,7 +23,7 @@ function App() {
       <H5>This is H5</H5>
       <H6>This is H6</H6>
 
-      <Btn color="blue" shade="dark" gradient>This is a Button custom!</Btn>
+      {/* <Btn color="blue" shade="light" >This is a Button custom!</Btn> */}
 
       <BrowserRouter>
         <Routes>
