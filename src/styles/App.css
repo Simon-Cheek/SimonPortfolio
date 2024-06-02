@@ -1,5 +1,6 @@
 /* Global styles are to be identified here */
 
 body {
-    margin-top: 64px !important;
+  margin-top: 64px !important;
+  background-color: #f4f6f9 !important;
 }
