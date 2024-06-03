@@ -68,7 +68,7 @@ function Header() {
                 Software
               </Nav.Link>
               <Nav.Link href="/contact" css={navbarText}>
-                <Btn shade="light" color="blue" gradient>
+                <Btn shade="light" color="blue" gradient bold>
                   Contact
                 </Btn>
               </Nav.Link>

@@ -55,10 +55,10 @@ function HeroText() {
       </Paragraph>
       <Separator size="lg" />
       <div>
-        <Btn color="blue" shade="light" gradient customCSS={btnStyle}>
+        <Btn color="blue" shade="light" gradient long customCSS={btnStyle}>
           Music
         </Btn>
-        <Btn color="brown" shade="light" gradient>
+        <Btn color="brown" shade="light" long gradient>
           Software
         </Btn>
       </div>
@@ -87,7 +87,7 @@ function HeroVisual() {
   const blueStyle = css`
     height: 190px;
     width: 200px;
-    border-radius: 32px;
+    border-radius: 16px;
     background-color: ${colors.blue03};
     transform: translateY(-100px) translateX(80px);
     position: absolute;
@@ -97,7 +97,7 @@ function HeroVisual() {
   const brownStyle = css`
     height: 190px;
     width: 200px;
-    border-radius: 32px;
+    border-radius: 16px;
     background-color: ${colors.brown01};
     transform: translateY(100px) translateX(-80px);
     position: absolute;

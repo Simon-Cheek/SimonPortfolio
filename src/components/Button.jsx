@@ -8,6 +8,8 @@ function Btn({
   shade = "normal",
   gradient = false,
   customCSS,
+  bold = false,
+  long = false,
   ...rest
 }) {
   let btnShade;
@@ -88,10 +90,30 @@ function Btn({
     `;
   }
 
+  // Make Button Text Bold if asked
+  let textBold;
+  if (bold) {
+    textBold = css`
+      font-weight: 600;
+    `;
+  }
+
+  // Make Button Longer if asked
+  let longer;
+  if (long) {
+    longer = css`
+      padding-left: 1.5em !important;
+      padding-right: 1.5em !important;
+    `;
+  }
+
   return (
     <>
-      <Button {...rest} css={[generalStyle, btnStyle, hoverStyle, customCSS]}>
-        {rest.children}
+      <Button
+        {...rest}
+        css={[generalStyle, btnStyle, hoverStyle, longer, customCSS]}
+      >
+        <span css={textBold}>{rest.children}</span>
       </Button>
     </>
   );
