@@ -1,12 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import Button from 'react-bootstrap/Button';
-import { colors } from '../styles/colors';
-import { css } from '@emotion/react';
+import Button from "react-bootstrap/Button";
+import { colors } from "../styles/colors";
+import { css } from "@emotion/react";
 
-
-
-function Btn({ color, shade = "normal", gradient = false, ...rest }) {
-
+function Btn({
+  color,
+  shade = "normal",
+  gradient = false,
+  customCSS,
+  ...rest
+}) {
   let btnShade;
 
   switch (shade) {
@@ -14,12 +17,11 @@ function Btn({ color, shade = "normal", gradient = false, ...rest }) {
       btnShade = "03";
       break;
     case "dark":
-      btnShade = "06";
+      btnShade = "05";
       break;
     default:
-      btnShade = "05";
+      btnShade = "04";
   }
-
 
   const clr = `${color}${btnShade}`;
 
@@ -31,18 +33,17 @@ function Btn({ color, shade = "normal", gradient = false, ...rest }) {
   const lightShade = parseInt(btnShade) - 1;
   const lightClr = `${color}0${lightShade}`;
 
-
   // General Button Styling
   const generalStyle = css`
     padding: 0.5em 1em;
     border: none !important;
     border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   `;
 
   let hoverStyle = css``;
 
-  // Lighter Upon Hover 
+  // Lighter Upon Hover
   const lightHover = css`
     transition: background-color 0.2s;
     &:hover {
@@ -62,7 +63,6 @@ function Btn({ color, shade = "normal", gradient = false, ...rest }) {
   let btnStyle;
 
   if (!gradient) {
-
     btnStyle = css`
       background-color: ${colors[clr]} !important;
     `;
@@ -71,11 +71,13 @@ function Btn({ color, shade = "normal", gradient = false, ...rest }) {
     } else {
       hoverStyle = lightHover;
     }
-
   } else {
-
     btnStyle = css`
-      background-image: linear-gradient(to right, ${colors[darkClr]}, ${colors[clr]}) !important;
+      background-image: linear-gradient(
+        to right,
+        ${colors[darkClr]},
+        ${colors[clr]}
+      ) !important;
     `;
 
     hoverStyle = css`
@@ -86,15 +88,13 @@ function Btn({ color, shade = "normal", gradient = false, ...rest }) {
     `;
   }
 
-
   return (
     <>
-      <Button {...rest} css={[generalStyle, btnStyle, hoverStyle]}>
+      <Button {...rest} css={[generalStyle, btnStyle, hoverStyle, customCSS]}>
         {rest.children}
       </Button>
     </>
   );
-
 }
 
 export default Btn;

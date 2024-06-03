@@ -5,6 +5,8 @@ import { H1, H4, H5, Paragraph } from "../Text";
 import Separator from "../Separator";
 import Btn from "../Button";
 
+import SimonPic from "../../assets/SimonPortPic.jpg";
+
 function HeroText() {
   const mainStyle = css`
     max-width: 450px;
@@ -12,7 +14,7 @@ function HeroText() {
   `;
 
   const pStyle = css`
-    color: ${colors.blue08};
+    color: ${colors.blue09};
     font-size: 0.9em;
   `;
 
@@ -34,33 +36,89 @@ function HeroText() {
   const spanStyle = css`
     font-weight: 700;
     font-size: 1.2em;
-    color: ${colors.blue07};
+    color: ${colors.blue08};
+  `;
+
+  const btnStyle = css`
+    margin-right: 1em;
   `;
 
   return (
     <div css={mainStyle}>
       <H5 customCSS={h5Style}>Composer - Software Engineer</H5>
       <H1 customCSS={h1Style}>SIMON CHEEK</H1>
-      <Separator />
+      <Separator size="lg" />
       <Paragraph customCSS={pStyle} weight="semibold">
         As a <span css={spanStyle}>Music / Computer Science</span> student at
         Brigham Young University, my passion for both innovation and technical
         expertise makes me a wonderful fit for your team!
       </Paragraph>
-      <Separator />
+      <Separator size="lg" />
       <div>
-        <Btn>Music</Btn>
-        <Btn>Software</Btn>
+        <Btn color="blue" shade="light" gradient customCSS={btnStyle}>
+          Music
+        </Btn>
+        <Btn color="brown" shade="light" gradient>
+          Software
+        </Btn>
       </div>
     </div>
   );
 }
 
-function HeroVisual() {}
+function HeroVisual() {
+  const containerStyle = css`
+    width: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  const imgStyle = css`
+    height: 225px;
+    width: 200px;
+    border-radius: 24px;
+    aspect-ratio: 0.9;
+    object-fit: cover;
+    z-index: 100;
+  `;
+
+  const blueStyle = css`
+    height: 190px;
+    width: 200px;
+    border-radius: 32px;
+    background-color: ${colors.blue03};
+    transform: translateY(-100px) translateX(80px);
+    position: absolute;
+    opacity: 0.85;
+  `;
+
+  const brownStyle = css`
+    height: 190px;
+    width: 200px;
+    border-radius: 32px;
+    background-color: ${colors.brown01};
+    transform: translateY(100px) translateX(-80px);
+    position: absolute;
+    opacity: 0.85;
+  `;
+
+  return (
+    <div css={containerStyle}>
+      <div css={blueStyle}></div>
+      <img src={SimonPic} css={imgStyle} />
+      <div css={brownStyle}></div>
+    </div>
+  );
+}
 
 function Hero() {
   const heroStyle = css`
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 600px;
   `;
 
   return (

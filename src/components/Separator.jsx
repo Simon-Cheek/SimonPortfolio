@@ -1,35 +1,31 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import { css } from "@emotion/react";
 
 function Separator({ size = "md", direction = "horizontal" }) {
-  let orient = (direction === "horizontal") ? "height" : "width";
+  let orient = direction === "horizontal" ? "height" : "width";
   let span;
   switch (size) {
     case "xs":
-      span = "4";
-      break;
-    case "sm":
       span = "8";
       break;
-    case "lg":
-      span = "16";
+    case "sm":
+      span = "12";
       break;
-    case "xl":
+    case "lg":
       span = "24";
       break;
+    case "xl":
+      span = "32";
+      break;
     default:
-      span = "12";
+      span = "16";
   }
 
   const sepStyle = css`
     ${orient}: ${span}px;
   `;
 
-  return (
-    <div css={sepStyle}></div>
-  );
+  return <div css={sepStyle}></div>;
 }
-
-
 
 export default Separator;
