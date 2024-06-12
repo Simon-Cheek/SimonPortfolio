@@ -118,7 +118,7 @@ function Hero() {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    min-height: 600px;
+    min-height: 700px;
   `;
 
   return (
