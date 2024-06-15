@@ -8,6 +8,7 @@ function AboutText() {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1em;
   `;
 
   const h2Style = css`
@@ -62,7 +63,7 @@ function TimelineEntry({ primaryText, secondaryText }) {
     padding: 0;
     margin: 0;
     font-style: italic;
-    color: ${colors.brown06};
+    color: ${colors.brown07};
     font-weight: 600;
     font-size: 1.35em;
   `;
@@ -86,7 +87,7 @@ function AboutTimeline() {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3em 0;
+    padding: 3em 1em;
   `;
 
   return (
