@@ -47,13 +47,13 @@ function HeroText() {
     <div css={mainStyle}>
       <H5 customCSS={h5Style}>Composer - Software Engineer</H5>
       <H1 customCSS={h1Style}>SIMON CHEEK</H1>
-      <Separator size="lg" />
+      <Separator size="md" />
       <Paragraph customCSS={pStyle} weight="semibold">
         As a <span css={spanStyle}>Music / Computer Science</span> student at
         Brigham Young University, my passion for both innovation and technical
         expertise makes me a wonderful fit for your team!
       </Paragraph>
-      <Separator size="lg" />
+      <Separator size="md" />
       <div>
         <Btn color="blue" shade="light" gradient long customCSS={btnStyle}>
           Music

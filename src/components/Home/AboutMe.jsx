@@ -39,9 +39,10 @@ function AboutText() {
         <H2 customCSS={h2Style}>About Me</H2>
         <Paragraph customCSS={pStyle}>
           Hello! My name is <span css={spanStyle}>Simon Cheek</span> and I am an
-          undergraduate student at Brigham Young University. I currently work as
-          a Web Developer Intern at FamilySearch and have worked as both a Web
-          Developer and TA for the BYU School of Music!
+          undergraduate student at Brigham Young University. My passion is
+          twofold- I dedicate myself to creating works of music ranging from
+          solos to large orchestral works as well as software that is efficient,
+          intuitive, and scalable!
         </Paragraph>
       </div>
     </div>
@@ -65,12 +66,12 @@ function TimelineEntry({ primaryText, secondaryText }) {
     font-style: italic;
     color: ${colors.brown07};
     font-weight: 600;
-    font-size: 1.35em;
+    font-size: 1.2em;
   `;
 
   const secondaryStyle = css`
     color: ${colors.gray09};
-    font-size: 0.9em;
+    font-size: 0.8em;
   `;
 
   return (

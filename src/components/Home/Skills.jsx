@@ -8,6 +8,7 @@ import javaLogo from "../../assets/java-logo.png";
 import reactLogo from "../../assets/react-logo.jpg";
 import musicLogo from "../../assets/treble-clef.png";
 import Separator from "../Separator";
+import Btn from "../Button";
 
 function SkillsList({ skills }) {
   const listStyle = css`
@@ -20,6 +21,7 @@ function SkillsList({ skills }) {
   const pStyle = css`
     font-size: 0.9em;
     font-weight: 600;
+    text-align: center;
   `;
 
   return (
@@ -37,14 +39,32 @@ function SkillsList({ skills }) {
 function SkillsPromo() {
   const skillsCards = [
     {
-      title: "SOFTWARE ENGINEERING",
-      img: javaLogo,
-      skills: ["Python", "Java", "Data Structures", "Algorithms"],
-    },
-    {
       title: "WEB DEVELOPMENT",
       img: reactLogo,
-      skills: ["HTML", "CSS", "Javascript / TypeScript", "React", "Node"],
+      skills: [
+        "HTML",
+        "CSS",
+        "Javascript / TypeScript",
+        "Bootstrap",
+        "React",
+        "Node",
+        "UI / UX",
+        "Figma",
+        "Unit Testing via Jest",
+      ],
+    },
+    {
+      title: "SOFTWARE ENGINEERING",
+      img: javaLogo,
+      skills: [
+        "Python",
+        "Java",
+        "C++",
+        "MySQL / MongoDB / DynamoDB",
+        "Data Structures / Algorithms",
+        "SDLC & CI/CD",
+        "AWS (EC2, Lambda, CDK, and More)",
+      ],
     },
     {
       title: "MUSIC",
@@ -67,8 +87,12 @@ function SkillsPromo() {
 
   const skillCardStyle = css`
     border-radius: 20px;
-    background-color: ${colors.gray01}47;
+    background-color: ${colors.gray01}79;
     margin: 0 1em;
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(1.05);
+    }
   `;
 
   const innerCardStyle = css`
@@ -126,12 +150,24 @@ function Header() {
   );
 }
 
+function ResumeBtn() {
+  return (
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <Btn color="blue" shade="light" gradient long>
+        Download Resume
+      </Btn>
+    </div>
+  );
+}
+
 function Skills() {
   return (
     <>
       <Header />
       <Separator size="xl" />
       <SkillsPromo />
+      <Separator size="xl" />
+      <ResumeBtn />
       <Separator size="xl" />
     </>
   );

@@ -8,6 +8,7 @@ import { H1, H2, H3, H4, H5, H6, Paragraph } from "./components/Text";
 import Hero from "./components/Home/Hero";
 import Btn from "./components/Button";
 import Home from "./components/Home/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           {/* <Route exact path="/" element={ } /> */}
         </Routes>
       </BrowserRouter>
+
+      <Footer />
     </>
   );
 }
