@@ -56,7 +56,7 @@ function TimelineEntry({ primaryText, secondaryText }) {
     border-bottom-right-radius: 24px;
     padding: 0.75em 3em;
     margin: 0.6em;
-    min-width: 400px;
+    width: 380px;
   `;
 
   const primaryStyle = css`
