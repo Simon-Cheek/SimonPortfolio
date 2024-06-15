@@ -168,7 +168,7 @@ function Skills() {
       <SkillsPromo />
       <Separator size="xl" />
       <ResumeBtn />
-      <Separator size="xl" />
+      <Separator />
     </>
   );
 }
