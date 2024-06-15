@@ -84,15 +84,24 @@ function SkillsPromo() {
     display: flex;
     padding: 0 2em;
     justify-content: center;
+    align-items: center;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
   `;
 
   const skillCardStyle = css`
     border-radius: 20px;
     background-color: ${colors.gray01}79;
     margin: 0 1em;
+    max-width: 85vw;
     transition: transform 0.5s;
     &:hover {
       transform: scale(1.05);
+    }
+    @media (max-width: 1023px) {
+      margin: 2em 0;
+      width: 350px;
     }
   `;
 

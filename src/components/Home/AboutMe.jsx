@@ -15,12 +15,18 @@ function AboutText() {
     color: ${colors.gray08};
     font-style: italic;
     font-weight: 600 !important;
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   `;
 
   const pStyle = css`
     max-width: 500px;
     color: ${colors.blue09};
     font-size: 0.95em;
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   `;
 
   const spanStyle = css`
@@ -55,9 +61,12 @@ function TimelineEntry({ primaryText, secondaryText }) {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
     border-top-left-radius: 24px;
     border-bottom-right-radius: 24px;
-    padding: 0.75em 3em;
+    padding: 0.5em 3em;
     margin: 0.6em;
     width: 380px;
+    @media (max-width: 479px) {
+      width: 300px;
+    }
   `;
 
   const primaryStyle = css`
@@ -121,6 +130,10 @@ function AboutMe() {
     margin-bottom: 60px;
     display: flex;
     justify-content: space-around;
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      padding-top: 1em;
+    }
   `;
 
   return (

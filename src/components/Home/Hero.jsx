@@ -11,6 +11,9 @@ function HeroText() {
   const mainStyle = css`
     max-width: 450px;
     padding: 12px;
+    @media (max-width: 1023px) {
+      text-align: center;
+    }
   `;
 
   const pStyle = css`
@@ -73,6 +76,7 @@ function HeroVisual() {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2em 0;
   `;
 
   const imgStyle = css`
@@ -92,6 +96,10 @@ function HeroVisual() {
     transform: translateY(-100px) translateX(80px);
     position: absolute;
     opacity: 0.85;
+    @media (max-width: 1023px) {
+      transform: translateY(-60px) translateX(60px);
+      border-radius: 40px;
+    }
   `;
 
   const brownStyle = css`
@@ -102,6 +110,10 @@ function HeroVisual() {
     transform: translateY(100px) translateX(-80px);
     position: absolute;
     opacity: 0.85;
+    @media (max-width: 1023px) {
+      transform: translateY(60px) translateX(-60px);
+      border-radius: 40px;
+    }
   `;
 
   return (
@@ -119,6 +131,12 @@ function Hero() {
     justify-content: space-evenly;
     align-items: center;
     min-height: 700px;
+    @media (min-width: 1264px) {
+      transform: scale(1.1);
+    }
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
   `;
 
   return (
