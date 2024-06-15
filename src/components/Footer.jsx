@@ -3,17 +3,14 @@ import { css } from "@emotion/react";
 import { colors } from "../styles/colors";
 
 import linkedIn from "../assets/linkedin.png";
-import { Paragraph } from "./Text";
+import github from "../assets/github.jpg";
 
 function FooterIcons() {
-  const sectionStyle = css`
-    display: flex;
-  `;
-
   const iconStyle = css`
     height: 40px;
     width: 40px;
     border-radius: 8px;
+    margin: 0 0.5em;
   `;
 
   const iconList = [
@@ -21,6 +18,7 @@ function FooterIcons() {
       src: linkedIn,
       link: "https://www.linkedin.com/in/simon-cheek-83726b175/",
     },
+    { src: github, link: "https://github.com/Simon-Cheek" },
   ];
 
   return (

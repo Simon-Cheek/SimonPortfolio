@@ -64,6 +64,7 @@ function SkillsPromo() {
         "Data Structures / Algorithms",
         "SDLC & CI/CD",
         "AWS (EC2, Lambda, CDK, and More)",
+        "Flutter SDK",
       ],
     },
     {
