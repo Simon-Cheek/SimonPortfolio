@@ -1,14 +1,14 @@
 /** @jsxImportSource @emotion/react */
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy } from "react";
 
 import Header from "./components/Header";
 import ColorPage from "./components/ColorPage";
-import { H1, H2, H3, H4, H5, H6, Paragraph } from "./components/Text";
-import Hero from "./components/Home/Hero";
-import Btn from "./components/Button";
-import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
+
+const Home = lazy(() => import("./components/Home/Home"));
+const About = lazy(() => import("./components/About/About"));
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/colors" element={<ColorPage />} />
+          <Route path="/about" element={<About />} />
           {/* <Route exact path="/" element={ } /> */}
         </Routes>
       </BrowserRouter>
