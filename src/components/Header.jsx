@@ -87,14 +87,14 @@ function Header() {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" css={pushRight}>
-            <Nav.Link href="/about" css={[navbarText, navbarAnimated]}>
-              About
-            </Nav.Link>
             <Nav.Link href="/music" css={[navbarText, navbarAnimated]}>
               Music
             </Nav.Link>
             <Nav.Link href="/software" css={[navbarText, navbarAnimated]}>
               Software
+            </Nav.Link>
+            <Nav.Link href="/resume" css={[navbarText, navbarAnimated]}>
+              Resume
             </Nav.Link>
             <Nav.Link href="/contact" css={navbarText}>
               <Btn shade="light" color="blue" gradient bold>
