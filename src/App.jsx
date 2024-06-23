@@ -8,6 +8,7 @@ import ColorPage from "./components/ColorPage";
 import Footer from "./components/Footer";
 
 const Home = lazy(() => import("./components/Home/Home"));
+const Music = lazy(() => import("./components/Music/Music"));
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/colors" element={<ColorPage />} />
+          <Route path="/music" element={<Music />} />
           {/* <Route exact path="/" element={ } /> */}
         </Routes>
       </BrowserRouter>
