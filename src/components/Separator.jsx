@@ -12,10 +12,10 @@ function Separator({ size = "md", direction = "horizontal" }) {
       span = "24";
       break;
     case "lg":
-      span = "32";
+      span = "36";
       break;
     case "xl":
-      span = "40";
+      span = "48";
       break;
     default:
       span = "16";
