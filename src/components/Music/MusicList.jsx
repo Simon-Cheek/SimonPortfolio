@@ -9,13 +9,15 @@ import { useCallback, useState } from "react";
 // Config Object for Music Works
 const musicCardConfig = [
   {
-    title: "Even if They Don't Grow",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur numquam enim, libero ipsum saepe delectus nihil quibusdam provident voluptatum at rem quisquam accusantium est beatae laudantium fugaomnis molestiae repudiandae!",
-    date: "July 2024",
-    instrumentation: "Violin, Viola, Piano",
-    pieceLength: "12 Minutes",
-    listenLink: "https://www.youtube.com",
-    searchTerms: ["Piano Trio"],
+    title: "I Dream of Mists",
+    desc: `Written at the Brevard Music Center (and read by their orchestra) in Brevard, North Carolina, "I Dream of Mists" is a 6 and a half minute piece dedicated to my time there. 
+      The concept of the piece is that of laying on your back and staring at the clouds in the sky- some are hazy mists while others are thunderheads. 
+      The orchestra emulates this feeling with hazy string textures, emphatic brass, and numerous woodwind solos.`,
+    date: "July 2023",
+    instrumentation: "Full Orchestra",
+    pieceLength: "6 Minutes",
+    listenLink: "https://www.youtube.com/watch?v=TZ_ufYDZLGo",
+    searchTerms: [],
   },
   {
     title: "Hi",
@@ -162,7 +164,7 @@ function ListOfWorks() {
     align-items: center;
     height: 600px;
     overflow-y: scroll;
-    padding: 1em;
+    padding: 1.5em;
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.15);
     width: 90%;
     max-width: 1200px;
@@ -193,7 +195,6 @@ function ListOfWorks() {
       </div>
       <Separator size="lg" />
       <div css={listStyle}>
-        <Separator size="xs" />
         <H6>Scroll to see more</H6>
         <Separator size="xs" />
         {filteredConfigs.length > 0 ? (
