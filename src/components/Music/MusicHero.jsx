@@ -67,15 +67,16 @@ function MusicHeroFrame() {
     height: 315px;
     border-radius: 8px;
     margin: 24px 0;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
   `;
 
   return (
     <iframe
       src="https://www.youtube.com/embed/ce8tYejoEd0?si=gyuC2VP27ki3odoh"
       title="YouTube video player"
-      frameborder="0"
+      frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
+      referrerPolicy="strict-origin-when-cross-origin"
       allowFullScreen
       css={frameStyle}
     />

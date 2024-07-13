@@ -1,11 +1,11 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import MusicHero from "./MusicHero";
+import MusicInfo from "./MusicInfo";
 
 function Music() {
   return (
     <>
       <MusicHero />
+      <MusicInfo />
     </>
   );
 }
