@@ -4,63 +4,18 @@ import { colors } from "../../styles/colors";
 import { H4, H5, H6, Paragraph } from "../Text";
 import Separator from "../Separator";
 import Btn from "../Button";
-import { useCallback, useState } from "react";
-
-// Config Object for Music Works
-const musicCardConfig = [
-  {
-    title: "I Dream of Mists",
-    desc: `Written at the Brevard Music Center (and read by their orchestra) in Brevard, North Carolina, "I Dream of Mists" is a 6 and a half minute piece dedicated to my time there. 
-      The concept of the piece is that of laying on your back and staring at the clouds in the sky- some are hazy mists while others are thunderheads. 
-      The orchestra emulates this feeling with hazy string textures, emphatic brass, and numerous woodwind solos.`,
-    date: "July 2023",
-    instrumentation: "Full Orchestra",
-    pieceLength: "6 Minutes",
-    listenLink: "https://www.youtube.com/watch?v=TZ_ufYDZLGo",
-    searchTerms: [],
-  },
-  {
-    title: "Hi",
-    desc: "Look here!",
-    date: "January 2340",
-    instrumentation: "Orchestra",
-    pieceLength: "3 Hours",
-    listenLink: "https://www.youtube.com",
-    searchTerms: ["Test"],
-  },
-  {
-    title: "Hi2",
-    desc: "Look here!",
-    date: "January 2340",
-    instrumentation: "Orchestra",
-    pieceLength: "3 Hours",
-    listenLink: "https://www.youtube.com",
-    searchTerms: ["Test"],
-  },
-  {
-    title: "Hi3",
-    desc: "Look here!",
-    date: "January 2340",
-    instrumentation: "Orchestra",
-    pieceLength: "3 Hours",
-    listenLink: "https://www.youtube.com",
-    searchTerms: ["Test"],
-  },
-  {
-    title: "Hi4",
-    desc: "Look here!",
-    date: "January 2340",
-    instrumentation: "Orchestra",
-    pieceLength: "3 Hours",
-    listenLink: "https://www.youtube.com",
-    searchTerms: ["Test"],
-  },
-];
+import { useState } from "react";
+import { musicCardConfig } from "../../musicCardConfig";
 
 const checkValue = (config, searchValue) => {
   if (
     config.title &&
     config.title.toLowerCase().includes(searchValue.toLowerCase())
+  )
+    return true;
+  if (
+    config.instrumentation &&
+    config.instrumentation.toLowerCase().includes(searchValue.toLowerCase())
   )
     return true;
   if (config.searchTerms && config.searchTerms.length > 0) {
