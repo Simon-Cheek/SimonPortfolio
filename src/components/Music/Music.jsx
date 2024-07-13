@@ -1,3 +1,4 @@
+import MusicList from "./MusicList";
 import MusicHero from "./MusicHero";
 import MusicInfo from "./MusicInfo";
 
@@ -6,6 +7,7 @@ function Music() {
     <>
       <MusicHero />
       <MusicInfo />
+      <MusicList />
     </>
   );
 }

@@ -48,6 +48,7 @@ function MusicInfo() {
     color: ${colors.blue08};
     font-style: italic;
     font-weight: 600;
+    font-size: 1.75em;
   `;
 
   const projectList = [
