@@ -33,4 +33,6 @@ export const colors = {
   gray07: "#33363b",
   gray08: "#1A1C1F",
   gray09: "#0A0A0F",
+
+  white: "#fbfbfe",
 };

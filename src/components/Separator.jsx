@@ -22,8 +22,9 @@ function Separator({ size = "md", direction = "horizontal" }) {
   }
 
   const sepStyle = css`
-    ${orient}: ${span}px;
+    min-${orient}: ${span}px;
   `;
+  console.log(sepStyle);
 
   return <div css={sepStyle}></div>;
 }
