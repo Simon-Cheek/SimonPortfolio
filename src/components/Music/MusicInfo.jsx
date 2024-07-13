@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { colors } from "../../styles/colors";
 import { H3, H4, Paragraph } from "../Text";
 import Separator from "../Separator";
+import { upcomingProjects } from "../../musicConfig";
 
 function ProjectEntry({ title, date }) {
   const containerStyle = css`
@@ -49,23 +50,15 @@ function MusicInfo() {
     font-style: italic;
     font-weight: 600;
     font-size: 1.75em;
+    text-align: center;
   `;
-
-  const projectList = [
-    {
-      title: "Wind Shear: Fanfare for Brass and Percussion",
-      date: "July 2024",
-    },
-    { title: "Even if they Don't Grow: Piano Trio", date: "September 2024" },
-    { title: "Future Orchestral Work", date: "January 2025" },
-  ];
 
   return (
     <div css={backgroundStyle}>
       <H3 customCSS={headerStyle}>Recent and Upcoming Projects</H3>
       <Separator size="lg" />
       <div>
-        {projectList.map((project) => (
+        {upcomingProjects.map((project) => (
           <ProjectEntry
             key={project.title}
             title={project.title}

@@ -50,6 +50,9 @@ function MusicHeroVisual() {
   const visualContainerStyle = css`
     position: relative;
     margin: 32px 60px;
+    @media (max-width: 767px) {
+      margin-bottom: 72px;
+    }
   `;
 
   return (
@@ -64,10 +67,14 @@ function MusicHeroVisual() {
 function MusicHeroFrame() {
   const frameStyle = css`
     width: 560px;
-    height: 315px;
+    aspect-ratio: 16/9;
+    max-width: 100%;
     border-radius: 8px;
     margin: 24px 0;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+    @media (max-width: 767px) {
+      transform: scale(0.8);
+    }
   `;
 
   return (
@@ -89,10 +96,16 @@ function MusicHeroMain() {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   `;
 
   const pContainerStyle = css`
     max-width: 50%;
+    @media (max-width: 767px) {
+      max-width: 90%;
+    }
   `;
 
   return (

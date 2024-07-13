@@ -5,7 +5,7 @@ import { H4, H5, H6, Paragraph } from "../Text";
 import Separator from "../Separator";
 import Btn from "../Button";
 import { useState } from "react";
-import { musicCardConfig } from "../../musicCardConfig";
+import { musicCardConfig } from "../../musicConfig";
 
 const checkValue = (config, searchValue) => {
   if (
@@ -30,11 +30,14 @@ function MusicCard({ title, desc, inst, len, listenLink, date }) {
   const workCardStyle = css`
     background-color: ${colors.brown00};
     display: flex;
+    flex-direction: column;
     padding: 1em;
     border-radius: 12px;
     box-shadow: 2.5px 2.5px 4px rgba(0, 0, 0, 0.15);
     margin: 1em 0;
     width: 100%;
+    @media (max-width: 767px) {
+    }
   `;
 
   const h5Style = css`
@@ -46,46 +49,56 @@ function MusicCard({ title, desc, inst, len, listenLink, date }) {
   const pStyle = css`
     font-size: 0.85em;
     display: block;
+    margin-right: 1.5em;
+    margin-top: -0.75em;
+    @media (max-width: 767px) {
+      margin-bottom: 0.5em;
+    }
   `;
 
   const instrumentStyle = css`
     white-space: nowrap;
     color: ${colors.blue09};
     margin-bottom: 2px;
-  `;
-
-  const leftSideStyle = css`
-    flex: 1;
-  `;
-
-  const rightSideStyle = css`
-    flex: 0;
     text-align: right;
-    margin-left: 1.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 4px 0;
+    @media (max-width: 767px) {
+      text-align: left;
+    }
   `;
+
+  const topStyle = css`
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin-bottom: 1em;
+    }
+  `;
+
+  const bottomStyle = css`
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: start;
+    }
+  `;
+
   return (
     <div css={workCardStyle}>
-      <div css={leftSideStyle}>
-        {title && (
-          <>
-            <H5 customCSS={h5Style}>{title}</H5>
-            <Separator />
-          </>
-        )}
-        <Paragraph weight="semibold" customCSS={pStyle}>
-          {desc}
-        </Paragraph>
-      </div>
-      <div css={rightSideStyle}>
-        <div style={{ marginBottom: "1em" }}>
+      <div css={topStyle}>
+        <H5 customCSS={h5Style}>{title}</H5>
+        <div style={{ paddingTop: "4px" }}>
           <H6 customCSS={instrumentStyle}>{inst}</H6>
           <H6 customCSS={instrumentStyle}>{date}</H6>
           <H6 customCSS={instrumentStyle}>{len}</H6>
         </div>
+      </div>
+      <div css={bottomStyle}>
+        <Paragraph weight="semibold" customCSS={pStyle}>
+          {desc}
+        </Paragraph>
         {listenLink && (
           <a href={listenLink}>
             <Btn shade="dark" color="blue">

@@ -68,3 +68,12 @@ export const musicCardConfig = [
     searchTerms: ["Test"],
   },
 ];
+
+export const upcomingProjects = [
+  {
+    title: "Wind Shear: Fanfare for Brass and Percussion",
+    date: "July 2024",
+  },
+  { title: "Even if they Don't Grow: Piano Trio", date: "September 2024" },
+  { title: "Future Orchestral Work", date: "January 2025" },
+];
