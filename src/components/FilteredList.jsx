@@ -1,11 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { colors } from "../../styles/colors";
-import { H4, H5, H6, Paragraph } from "../Text";
-import Separator from "../Separator";
-import Btn from "../Button";
-import { useState } from "react";
-import { musicCardConfig } from "../../musicConfig";
+import { colors } from "../styles/colors";
+import { H4, H5, H6, Paragraph } from "./Text";
+import Separator from "./Separator";
+import Btn from "./Button";
+import { useMemo, useState } from "react";
 
 const checkValue = (config, searchValue) => {
   if (
@@ -13,11 +12,11 @@ const checkValue = (config, searchValue) => {
     config.title.toLowerCase().includes(searchValue.toLowerCase())
   )
     return true;
-  if (
-    config.instrumentation &&
-    config.instrumentation.toLowerCase().includes(searchValue.toLowerCase())
-  )
-    return true;
+  if (config.sideText && config.sideText.length > 0) {
+    for (const text of config.sideText) {
+      if (text.toLowerCase().includes(searchValue.toLowerCase())) return true;
+    }
+  }
   if (config.searchTerms && config.searchTerms.length > 0) {
     for (const term of config.searchTerms) {
       if (term.toLowerCase().includes(searchValue.toLowerCase())) return true;
@@ -26,7 +25,7 @@ const checkValue = (config, searchValue) => {
   return false;
 };
 
-function MusicCard({ title, desc, inst, len, listenLink, date }) {
+function ListCard({ title, desc, sideText, inviteLink }) {
   const workCardStyle = css`
     background-color: ${colors.brown00};
     display: flex;
@@ -56,7 +55,7 @@ function MusicCard({ title, desc, inst, len, listenLink, date }) {
     }
   `;
 
-  const instrumentStyle = css`
+  const sideTextStyle = css`
     white-space: nowrap;
     color: ${colors.blue09};
     margin-bottom: 2px;
@@ -90,17 +89,20 @@ function MusicCard({ title, desc, inst, len, listenLink, date }) {
       <div css={topStyle}>
         <H5 customCSS={h5Style}>{title}</H5>
         <div style={{ paddingTop: "4px" }}>
-          <H6 customCSS={instrumentStyle}>{inst}</H6>
-          <H6 customCSS={instrumentStyle}>{date}</H6>
-          <H6 customCSS={instrumentStyle}>{len}</H6>
+          {sideText &&
+            sideText.map((text) => (
+              <H6 key={text} customCSS={sideTextStyle}>
+                {text}
+              </H6>
+            ))}
         </div>
       </div>
       <div css={bottomStyle}>
         <Paragraph weight="semibold" customCSS={pStyle}>
           {desc}
         </Paragraph>
-        {listenLink && (
-          <a href={listenLink}>
+        {inviteLink && (
+          <a href={inviteLink}>
             <Btn shade="dark" color="blue">
               <span style={{ whiteSpace: "nowrap" }}>Listen Here</span>
             </Btn>
@@ -111,7 +113,7 @@ function MusicCard({ title, desc, inst, len, listenLink, date }) {
   );
 }
 
-function ListOfWorks() {
+function ListOfWorks({ config }) {
   const searchStyle = css`
     display: flex;
     justify-content: center;
@@ -142,9 +144,11 @@ function ListOfWorks() {
 
   const [searchValue, setSearchValue] = useState("");
 
-  const filteredConfigs = musicCardConfig.filter((config) =>
-    !searchValue ? true : checkValue(config, searchValue)
-  );
+  const filteredConfigs = useMemo(() => {
+    return config.filter((item) =>
+      !searchValue ? true : checkValue(item, searchValue)
+    );
+  }, [config, searchValue]);
 
   const handleChange = (event) => {
     setSearchValue(event.target.value);
@@ -167,25 +171,23 @@ function ListOfWorks() {
         <Separator size="xs" />
         {filteredConfigs.length > 0 ? (
           filteredConfigs.map((config) => (
-            <MusicCard
+            <ListCard
               key={config.title}
               title={config.title}
               desc={config.desc}
-              inst={config.instrumentation}
-              len={config.pieceLength}
-              listenLink={config.listenLink}
-              date={config.date}
+              sideText={config.sideText}
+              inviteLink={config.inviteLink}
             />
           ))
         ) : (
-          <MusicCard desc="Nothing matches your search!" />
+          <ListCard desc="Nothing matches your search!" />
         )}
       </div>
     </>
   );
 }
 
-function MusicList() {
+function FilteredList({ config, header }) {
   const headerStyle = css`
     color: ${colors.blue08};
     font-style: italic;
@@ -202,11 +204,11 @@ function MusicList() {
 
   return (
     <div css={containerStyle}>
-      <H4 customCSS={headerStyle}>List of Works</H4>
+      <H4 customCSS={headerStyle}>{header}</H4>
       <Separator size="lg" />
-      <ListOfWorks />
+      <ListOfWorks config={config} />
     </div>
   );
 }
 
-export default MusicList;
+export default FilteredList;
