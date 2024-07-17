@@ -2,6 +2,7 @@
 import { css } from "@emotion/react";
 import { colors } from "../../styles/colors";
 import { H2, H3, H5, Paragraph } from "../Text";
+import BlueRow from "../BlueRow";
 
 function AboutText() {
   const formatStyle = css`
@@ -121,12 +122,6 @@ function AboutTimeline() {
 function AboutMe() {
   const aboutStyle = css`
     min-height: 300px;
-    background-image: linear-gradient(
-      to right,
-      ${colors.blue02},
-      ${colors.blue01},
-      ${colors.blue00}
-    );
     margin-bottom: 60px;
     display: flex;
     justify-content: space-around;
@@ -137,10 +132,10 @@ function AboutMe() {
   `;
 
   return (
-    <div css={aboutStyle}>
+    <BlueRow customCSS={aboutStyle}>
       <AboutText />
       <AboutTimeline />
-    </div>
+    </BlueRow>
   );
 }
 

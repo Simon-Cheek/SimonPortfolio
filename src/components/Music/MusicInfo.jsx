@@ -4,11 +4,12 @@ import { colors } from "../../styles/colors";
 import { H3, H4, Paragraph } from "../Text";
 import Separator from "../Separator";
 import { upcomingProjects } from "../../musicConfig";
+import BlueRow from "../BlueRow";
 
 function ProjectEntry({ title, date }) {
   const containerStyle = css`
     text-align: center;
-    margin: 2em 0;
+    margin-top: 1.5em;
   `;
 
   const pStyle = css`
@@ -35,14 +36,6 @@ function MusicInfo() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 300px;
-    padding: 2em 0;
-    background-image: linear-gradient(
-      to right,
-      ${colors.blue02},
-      ${colors.blue01},
-      ${colors.blue00}
-    );
   `;
 
   const headerStyle = css`
@@ -54,7 +47,7 @@ function MusicInfo() {
   `;
 
   return (
-    <div css={backgroundStyle}>
+    <BlueRow customCSS={backgroundStyle}>
       <H3 customCSS={headerStyle}>Recent and Upcoming Projects</H3>
       <Separator size="lg" />
       <div>
@@ -66,7 +59,7 @@ function MusicInfo() {
           />
         ))}
       </div>
-    </div>
+    </BlueRow>
   );
 }
 
