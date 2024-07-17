@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { H2, Paragraph } from "../Text";
-
+import { Paragraph } from "../Text";
 import SimonClarinet from "../../assets/SimonClarinet.png";
 import { colors } from "../../styles/colors";
 import Separator from "../Separator";
@@ -140,7 +139,6 @@ function MusicHero() {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3em 0;
   `;
 
   const headerStyle = css`
@@ -150,8 +148,6 @@ function MusicHero() {
 
   return (
     <div css={containerStyle}>
-      <H2 customCSS={headerStyle}>Music</H2>
-      <Separator size="xl" />
       <MusicHeroMain />
       <Separator size="xl" />
       <MusicHeroFrame />

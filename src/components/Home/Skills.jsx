@@ -5,7 +5,7 @@ import { colors } from "../../styles/colors";
 import Card from "../Card";
 
 import javaLogo from "../../assets/java-logo.png";
-import reactLogo from "../../assets/react-logo.jpg";
+import reactLogo from "../../assets/react-logo.png";
 import musicLogo from "../../assets/treble-clef.png";
 import Separator from "../Separator";
 import Btn from "../Button";
@@ -91,10 +91,9 @@ function SkillsPromo() {
   `;
 
   const skillCardStyle = css`
-    border-radius: 20px;
-    background-color: ${colors.gray01}79;
     margin: 0 1em;
     max-width: 85vw;
+    max-height: 430px;
     transition: transform 0.5s;
     &:hover {
       transform: scale(1.05);
