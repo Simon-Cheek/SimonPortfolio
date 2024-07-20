@@ -25,7 +25,7 @@ const checkValue = (config, searchValue) => {
   return false;
 };
 
-function ListCard({ title, desc, sideText, inviteLink }) {
+function ListCard({ title, desc, sideText, inviteLink, buttonText }) {
   const workCardStyle = css`
     background-color: ${colors.brown00};
     display: flex;
@@ -49,9 +49,12 @@ function ListCard({ title, desc, sideText, inviteLink }) {
     font-size: 0.85em;
     display: block;
     margin-right: 1.5em;
-    margin-top: -0.75em;
+    margin-top: -0.6em;
+    ${!inviteLink && `max-width: 80%;`}
+
     @media (max-width: 767px) {
       margin-bottom: 0.5em;
+      transform: translateY(0);
     }
   `;
 
@@ -78,10 +81,25 @@ function ListCard({ title, desc, sideText, inviteLink }) {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    ${sideText &&
+    sideText.length > 2 &&
+    desc.length > 350 &&
+    `margin-top: -0.5em;`}
     @media (max-width: 767px) {
+      transform: translateY(0);
       flex-direction: column;
       align-items: start;
     }
+  `;
+
+  const btnTxtStyle = css`
+    font-size: 0.8em;
+  `;
+
+  const btnStyle = css`
+    margin-top: 0.25em;
+    padding: 0.2em 0.75em;
+    border-radius: 12px;
   `;
 
   return (
@@ -103,8 +121,13 @@ function ListCard({ title, desc, sideText, inviteLink }) {
         </Paragraph>
         {inviteLink && (
           <a href={inviteLink}>
-            <Btn shade="dark" color="blue">
-              <span style={{ whiteSpace: "nowrap" }}>Listen Here</span>
+            <Btn
+              shade="dark"
+              color="blue"
+              customCSS={btnStyle}
+              customTextCSS={btnTxtStyle}
+            >
+              <span style={{ whiteSpace: "nowrap" }}>{buttonText}</span>
             </Btn>
           </a>
         )}
@@ -113,7 +136,7 @@ function ListCard({ title, desc, sideText, inviteLink }) {
   );
 }
 
-function ListOfWorks({ config }) {
+function ListOfWorks({ config, buttonText }) {
   const searchStyle = css`
     display: flex;
     justify-content: center;
@@ -177,6 +200,7 @@ function ListOfWorks({ config }) {
               desc={config.desc}
               sideText={config.sideText}
               inviteLink={config.inviteLink}
+              buttonText={buttonText}
             />
           ))
         ) : (
@@ -187,7 +211,7 @@ function ListOfWorks({ config }) {
   );
 }
 
-function FilteredList({ config, header }) {
+function FilteredList({ config, header, buttonText }) {
   const headerStyle = css`
     color: ${colors.blue08};
     font-style: italic;
@@ -206,7 +230,7 @@ function FilteredList({ config, header }) {
     <div css={containerStyle}>
       <H4 customCSS={headerStyle}>{header}</H4>
       <Separator size="lg" />
-      <ListOfWorks config={config} />
+      <ListOfWorks config={config} buttonText={buttonText} />
     </div>
   );
 }

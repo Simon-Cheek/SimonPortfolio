@@ -79,7 +79,7 @@ export function H4({ children, customCSS }) {
 export function H5({ children, customCSS }) {
   const h5Style = css`
     font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 700;
     margin: 0 4px;
     padding: 4px 0;

@@ -18,7 +18,6 @@ function HeroText() {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3em;
   `;
   const h3Style = css`
     margin-left: 0;
@@ -117,6 +116,8 @@ function SoftwareHero() {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin: 2em 0;
+    padding: 0 3em;
   `;
   return (
     <div css={containerStyle}>

@@ -12,7 +12,11 @@ function Music() {
       <MusicHero />
       <Separator size="xl" />
       <MusicInfo />
-      <FilteredList config={musicCardConfig} header="List of Works" />
+      <FilteredList
+        config={musicCardConfig}
+        header="List of Works"
+        buttonText="Listen Here"
+      />
     </>
   );
 }

@@ -1,3 +1,5 @@
+import { sweCardConfig } from "../../softwareConfig";
+import FilteredList from "../FilteredList";
 import PageHeader from "../PageHeader";
 import Separator from "../Separator";
 import SoftwareExp from "./SoftwareExp";
@@ -8,8 +10,13 @@ function Software() {
     <>
       <PageHeader header="Software" />
       <SoftwareHero />
-      <Separator size="lg" />
+      <Separator size="xl" />
       <SoftwareExp />
+      <FilteredList
+        config={sweCardConfig}
+        header="Personal Projects"
+        buttonText="Code"
+      />
     </>
   );
 }

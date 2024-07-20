@@ -8,6 +8,7 @@ function Btn({
   shade = "normal",
   gradient = false,
   customCSS,
+  customTextCSS,
   bold = false,
   long = false,
   ...rest
@@ -113,7 +114,7 @@ function Btn({
         {...rest}
         css={[generalStyle, btnStyle, hoverStyle, longer, customCSS]}
       >
-        <span css={textBold}>{rest.children}</span>
+        <span css={[textBold, customTextCSS]}>{rest.children}</span>
       </Button>
     </>
   );
