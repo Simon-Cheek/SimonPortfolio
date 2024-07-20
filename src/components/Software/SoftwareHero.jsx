@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import Card from "../Card";
-import { H5 } from "../Text";
+import { H3, H5, Paragraph } from "../Text";
 import Separator from "../Separator";
 
 import javaLogo from "../../assets/java-logo.png";
@@ -10,8 +10,47 @@ import pythonLogo from "../../assets/python.png";
 import reactLogo from "../../assets/react-logo.png";
 import nodeLogo from "../../assets/node-logo.png";
 import springLogo from "../../assets/spring-logo.png";
+import BulletedList from "../BulletedList";
+import { colors } from "../../styles/colors";
 
-function HeroText() {}
+function HeroText() {
+  const textContainerStyle = css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3em;
+  `;
+  const h3Style = css`
+    margin-left: 0;
+    font-style: italic;
+    color: ${colors.blue06};
+  `;
+  const pStyle = css`
+    max-width: 85%;
+  `;
+
+  const listItems = [
+    "C++",
+    "Flutter SDK",
+    "AWS",
+    "Bootstrap",
+    "Figma",
+    "MySQL",
+    "MongoDB",
+  ];
+  return (
+    <div css={textContainerStyle}>
+      <Paragraph weight="semibold">As a</Paragraph>
+      <H3 customCSS={h3Style}>Full Stack Developer,</H3>
+      <Paragraph weight="semibold" customCSS={pStyle}>
+        I enjoy building software of all kinds using these tools and many
+        others, including:
+      </Paragraph>
+      <Separator size="xs" />
+      <BulletedList paragraph listItems={listItems} weight="semibold" />
+    </div>
+  );
+}
 
 function HeroCards() {
   const containerStyle = css`
@@ -73,8 +112,14 @@ function HeroCards() {
 }
 
 function SoftwareHero() {
+  const containerStyle = css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  `;
   return (
-    <div>
+    <div css={containerStyle}>
       <HeroText />
       <HeroCards />
     </div>
