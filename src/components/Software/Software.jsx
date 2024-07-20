@@ -10,7 +10,7 @@ function Software() {
     <>
       <PageHeader header="Software" />
       <SoftwareHero />
-      <Separator size="xl" />
+      <Separator size="xls" />
       <SoftwareExp />
       <FilteredList
         config={sweCardConfig}
