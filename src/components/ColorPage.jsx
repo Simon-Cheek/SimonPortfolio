@@ -7,7 +7,6 @@ export function ColorPage() {
   const tableStyle = css`
     min-width: 400px;
     max-width: 800px;
-    height: calc(100vh - 72px - 64px);
     padding-top: 2em;
     justify-content: center;
   `;

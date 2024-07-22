@@ -7,7 +7,7 @@ import Card from "../Card";
 import { colors } from "../../styles/colors";
 import BulletedList from "../BulletedList";
 
-function ResumeEntry({ title, desc1, desc2, listItems, resume, color }) {
+function ResumeEntry({ title, desc1, desc2, listItems, resume }) {
   const headerStyle = css`
     font-style: italic;
   `;
@@ -19,9 +19,10 @@ function ResumeEntry({ title, desc1, desc2, listItems, resume, color }) {
   `;
 
   const cardStyle = css`
-    background-color: ${colors[`${color}00`]};
+    background-color: ${colors.brown00}a6;
     margin: 1.5em;
     max-width: 600px;
+    flex: 1;
   `;
 
   return (
@@ -33,7 +34,7 @@ function ResumeEntry({ title, desc1, desc2, listItems, resume, color }) {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {desc1}
         </Paragraph>
         <Separator size="sm" />
-        <Btn color={color} shade="light" gradient long>
+        <Btn color="blue" shade="light" long>
           Resume
         </Btn>
         <Separator size="sm" />
