@@ -6,6 +6,7 @@ export const musicResumeConfig = {
           large ensembles- being particularly passionate about the latter.`,
   desc2: `Recent events and accomplishments
           involve a wide variety of disciplines, such as:`,
+  resume: "musicResume.pdf",
   listItems: [
     "Music History, Theory, and Orchestration TA at BYU",
     "3 Time Winner of Mayhew Prize, open to all BYU Students",
@@ -26,6 +27,7 @@ export const softwareResumeConfig = {
           Hackathons, and personal projects!
   `,
   desc2: `Some recent highlights in my personal and work life include:`,
+  resume: "sweResume.pdf",
   listItems: [
     "Current Web Developer Intern at FamilySearch (React, Node, TypeScript)",
     "Previous Student Web Developer, BYU School of Music (HTML/CSS/JS)",

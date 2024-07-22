@@ -12,7 +12,9 @@ const Home = lazy(() => import("./components/Home/Home"));
 const Music = lazy(() => import("./components/Music/Music"));
 const Software = lazy(() => import("./components/Software/Software"));
 const Resume = lazy(() => import("./components/Resume/Resume"));
+const Contact = lazy(() => import("./components/Contact/Contact"));
 
+// Ensures Footer sticks to bottom
 const minHeightStyle = css`
   min-height: calc(100vh - 72px - 64px);
 `;
@@ -30,6 +32,7 @@ function App() {
             <Route path="/music" element={<Music />} />
             <Route path="/software" element={<Software />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
             {/* <Route exact path="/" element={ } /> */}
           </Routes>
         </BrowserRouter>

@@ -34,9 +34,11 @@ function ResumeEntry({ title, desc1, desc2, listItems, resume }) {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {desc1}
         </Paragraph>
         <Separator size="sm" />
-        <Btn color="blue" shade="light" long>
-          Resume
-        </Btn>
+        <a href={`/${resume}`} download={resume}>
+          <Btn color="blue" shade="light" long>
+            Resume
+          </Btn>
+        </a>
         <Separator size="sm" />
         <Paragraph
           weight="semibold"

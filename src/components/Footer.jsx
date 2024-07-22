@@ -4,6 +4,7 @@ import { colors } from "../styles/colors";
 
 import linkedIn from "../assets/linkedin.png";
 import github from "../assets/github.jpg";
+import youtube from "../assets/youtube.png";
 
 function FooterIcons() {
   const iconStyle = css`
@@ -19,6 +20,7 @@ function FooterIcons() {
       link: "https://www.linkedin.com/in/simon-cheek-83726b175/",
     },
     { src: github, link: "https://github.com/Simon-Cheek" },
+    { src: youtube, link: "https://www.youtube.com/@simoncheek992" },
   ];
 
   return (

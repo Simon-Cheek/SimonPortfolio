@@ -58,10 +58,17 @@ function HeroText() {
       </Paragraph>
       <Separator size="md" />
       <div>
-        <Btn color="blue" shade="light" gradient long customCSS={btnStyle}>
+        <Btn
+          color="blue"
+          shade="light"
+          gradient
+          long
+          customCSS={btnStyle}
+          to="/music"
+        >
           Music
         </Btn>
-        <Btn color="brown" shade="light" long gradient>
+        <Btn color="brown" shade="light" long gradient to="/software">
           Software
         </Btn>
       </div>

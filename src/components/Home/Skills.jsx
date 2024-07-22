@@ -162,9 +162,11 @@ function Header() {
 function ResumeBtn() {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Btn color="blue" shade="light" gradient long>
-        Download Resume
-      </Btn>
+      <a href="/sweResume.pdf" download="sweResume.pdf">
+        <Btn color="blue" shade="light" gradient long>
+          Download Resume
+        </Btn>
+      </a>
     </div>
   );
 }

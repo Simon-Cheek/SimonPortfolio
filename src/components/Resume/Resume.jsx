@@ -24,12 +24,14 @@ function Resume() {
           desc1={musicResumeConfig.desc1}
           desc2={musicResumeConfig.desc2}
           listItems={musicResumeConfig.listItems}
+          resume={musicResumeConfig.resume}
         />
         <ResumeEntry
           title={softwareResumeConfig.title}
           desc1={softwareResumeConfig.desc1}
           desc2={softwareResumeConfig.desc2}
           listItems={softwareResumeConfig.listItems}
+          resume={softwareResumeConfig.resume}
         />
       </div>
       <Separator size="lg" />

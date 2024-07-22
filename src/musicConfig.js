@@ -1,5 +1,28 @@
 export const musicCardConfig = [
   {
+    title: "Dusk Descending upon Glass",
+    desc: `Commissioned and premiered by Madi Thunhorst in March 2024. Inspired by the Bonneville Salt Flats in Utah,
+      I drew upon two different moods in this piece. One is that of joy and brightness! I imagine someone seemingly dancing upon the
+      sky, floating above the clouds. And yet, there is nothing but clouds and sky for miles. The combination of joy and isolation makes
+      for a light yet melancholic solo that slowly winds itself down.
+    `,
+    sideText: ["March 2024", "Solo Violin", "5'"],
+    inviteLink: "https://www.youtube.com/watch?v=A1bbgFehsGs",
+    searchTerms: [],
+  },
+
+  {
+    title: "A Garden: Song Cycle in 5 Movements",
+    desc: `This piece, the first serious vocal work of mine, came about as a result of a desire to mix modern music with original text.
+      The text, written by Alanna Hess, uses a garden as a metaphor for one's ability to communicate artistic ideas. The piece is dark,
+      conveying despair as the narrator laments their inability to share their ideas with the world. Throughout 3 songs (split between interludes),
+      the narrator slowly reaches a state of humility and confidence.
+    `,
+    sideText: ["March 2024", "Soprano, Cello, Piano", "20'"],
+    searchTerms: ["Vocal", "Song", "Chamber", "Text", "Alanna Hess"],
+  },
+
+  {
     title: "Pulsating",
     desc: `This odd combination has been one I've been interested in writing for quite a while. 
       The humorous pairing of a comically high instrument with one comically low makes for quite an entertaining piece regardless of content. 
@@ -17,6 +40,19 @@ export const musicCardConfig = [
     sideText: ["July 2023", "Full Orchestra", "6'"],
     inviteLink: "https://www.youtube.com/watch?v=TZ_ufYDZLGo",
     searchTerms: [],
+  },
+
+  {
+    title: "Swarm",
+    desc: `Written for the Brevard Music Center and premiered by the BMC New Music Ensemble. 
+      Inspired by the constant chatter of bugs in the forest, Swarm morphs between
+      scattered motifs that represent individual bugs flying in every direction at once and
+      a more homogenous sound, representing swarms of insects as a single entity. Fast, exciting,
+      and a little chaotic!
+    `,
+    sideText: ["June 2023", "String Quartet", "6'"],
+    inviteLink: "https://www.youtube.com/watch?v=hu8voPB2f5M",
+    searchTerms: ["Violin", "Viola", "Cello", "String Quartet"],
   },
 
   {
@@ -49,13 +85,6 @@ export const musicCardConfig = [
     sideText: ["November 2022", "String Quartet", "5'30\""],
     inviteLink: "https://www.youtube.com/watch?v=2RKRkfpNdn8",
     searchTerms: ["Violin", "Viola", "Cello", "String", "Chamber"],
-  },
-  {
-    title: "Hi4",
-    desc: "Look here!",
-    sideText: ["January 2340", "Orchestra", "5'30\""],
-    inviteLink: "https://www.youtube.com",
-    searchTerms: ["Test"],
   },
 ];
 

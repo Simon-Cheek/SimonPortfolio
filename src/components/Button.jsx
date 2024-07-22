@@ -11,6 +11,7 @@ function Btn({
   customTextCSS,
   bold = false,
   long = false,
+  to,
   ...rest
 }) {
   let btnShade;
@@ -108,15 +109,22 @@ function Btn({
     `;
   }
 
-  return (
-    <>
+  return !to ? (
+    <Button
+      {...rest}
+      css={[generalStyle, btnStyle, hoverStyle, longer, customCSS]}
+    >
+      <span css={[textBold, customTextCSS]}>{rest.children}</span>
+    </Button>
+  ) : (
+    <a href={to}>
       <Button
         {...rest}
         css={[generalStyle, btnStyle, hoverStyle, longer, customCSS]}
       >
         <span css={[textBold, customTextCSS]}>{rest.children}</span>
       </Button>
-    </>
+    </a>
   );
 }
 
