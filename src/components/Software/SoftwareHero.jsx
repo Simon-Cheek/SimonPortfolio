@@ -118,6 +118,10 @@ function SoftwareHero() {
     width: 100%;
     margin: 2em 0;
     padding: 0 3em;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
   `;
   return (
     <div css={containerStyle}>
