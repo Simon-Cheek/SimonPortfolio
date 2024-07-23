@@ -1,0 +1,1 @@
+import{j as r,a as e,F as s}from"./index-D4WvN2Fu.js";import{S as t,b as n}from"./Separator-BpxQjtFl.js";var i={name:"1j7u0d2",styles:"font-style:italic;font-weight:600;text-align:center"};function m({header:a}){return r(s,{children:[e(t,{size:"xl"}),e(n,{customCSS:i,children:a}),e(t,{size:"xl"})]})}export{m as P};
