@@ -2,7 +2,15 @@
 import Button from "react-bootstrap/Button";
 import { colors } from "../styles/colors";
 import { css } from "@emotion/react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { startTransition } from "react";
+
+function handleNavigation(to) {
+  startTransition(() => {
+    // Trigger navigation here, e.g., using useNavigate from react-router-dom
+    Navigate(to);
+  });
+}
 
 function Btn({
   color,
@@ -118,7 +126,11 @@ function Btn({
       <span css={[textBold, customTextCSS]}>{rest.children}</span>
     </Button>
   ) : (
-    <Link to={to} style={{ textDecoration: "none" }}>
+    <Link
+      to={to}
+      style={{ textDecoration: "none" }}
+      onClick={() => handleNavigation(to)}
+    >
       <Button
         {...rest}
         css={[generalStyle, btnStyle, hoverStyle, longer, customCSS]}
