@@ -14,6 +14,9 @@ function ExpSection({ title, company, details }) {
     align-items: center;
     max-width: 400px;
     margin: 0 0.5em;
+    @media (max-width: 767px) {
+      margin: 0.75em 0.5em;
+    }
   `;
   const headerStyle = css`
     text-align: center;
@@ -51,6 +54,10 @@ function SoftwareExp() {
   const containerStyle = css`
     display: flex;
     justify-content: center;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
   `;
   return (
     <BlueRow>
