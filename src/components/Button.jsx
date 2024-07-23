@@ -2,6 +2,7 @@
 import Button from "react-bootstrap/Button";
 import { colors } from "../styles/colors";
 import { css } from "@emotion/react";
+import { Link } from "react-router-dom";
 
 function Btn({
   color,
@@ -117,14 +118,14 @@ function Btn({
       <span css={[textBold, customTextCSS]}>{rest.children}</span>
     </Button>
   ) : (
-    <a href={to}>
+    <Link to={to} style={{ textDecoration: "none" }}>
       <Button
         {...rest}
         css={[generalStyle, btnStyle, hoverStyle, longer, customCSS]}
       >
         <span css={[textBold, customTextCSS]}>{rest.children}</span>
       </Button>
-    </a>
+    </Link>
   );
 }
 
