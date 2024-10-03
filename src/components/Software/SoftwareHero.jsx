@@ -29,7 +29,7 @@ function HeroText() {
   `;
 
   const listItems = [
-    "C++",
+    "C/C++",
     "Flutter SDK",
     "AWS",
     "Bootstrap",

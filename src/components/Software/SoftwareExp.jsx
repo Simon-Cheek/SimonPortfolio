@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import BlueRow from "../BlueRow";
-import { H3, H4, H5, H6 } from "../Text";
+import { H3, H5, H6 } from "../Text";
 import { colors } from "../../styles/colors";
 import BulletedList from "../BulletedList";
 import { sweExp } from "../../softwareConfig";
