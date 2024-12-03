@@ -3,7 +3,7 @@ export const sweExp = [
     title: "Web Intern",
     company: "FamilySearch",
     details: [
-      "Design, build, and debug React Components",
+      "Design, build, and debug React TypeScript Components",
       "Manage internal APIs through AWS API Gateway and Lambda",
       "Build Node/Express Middleware for services such as Prerender",
       "Coordinate team efforts using Agile Methodologies",
@@ -27,13 +27,36 @@ export const sweExp = [
       "Music Composition Major / Computer Science Minor",
       "3.99 GPA with Hinckley Scholarship, an Academic and Service oriented award",
       "Music Scholarships with awards in Clarinet Performance and Composition",
-      "Coursework in Full Stack Web Dev, Data Structures, OOP, and more",
-      "Memberships in Developer's Club, Music Student Advisory Council, and dozens of Music Ensembles performing on and off campus",
+      "Coursework in Full Stack Web Dev, Data Structures, OOP, Systems, and more",
+      "VP: Developer's Club, Member of Music Student Advisory Council, plus dozens of Music Ensembles performing on and off campus",
     ],
   },
 ];
 
 export const sweCardConfig = [
+  {
+    title: "Recipes API Service",
+    desc: `Backend API allowing users to register, create recipes, and sort their recipes into custom categories.`,
+    sideText: ["Spring Boot", "Java", "MySQL"],
+    inviteLink: "https://github.com/Simon-Cheek/recipes",
+    searchTerms: ["JPARepository", "Database", "REST", "API", "Spring"],
+  },
+  {
+    title: "Online Chess Application",
+    desc: `Full Stack Command Line application allowing users to register, play chess, and observe games in real time. Created in fulfillment
+    of BYU's CS240 class. Features Websocketing, Encryption, Authentication, Spark API, and more!
+    `,
+    sideText: ["Java", "MySQL", "Websocket"],
+    inviteLink: "https://github.com/Simon-Cheek/chess",
+    searchTerms: [
+      "Database",
+      "REST",
+      "API",
+      "Authentication",
+      "Login",
+      "Full Stack",
+    ],
+  },
   {
     title: "Used Car Web Scraper",
     desc: `A web scraper written in Python, designed to scrape KSL's used car listings for your choice of car make and model.
