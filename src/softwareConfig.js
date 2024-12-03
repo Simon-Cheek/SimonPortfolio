@@ -36,15 +36,15 @@ export const sweExp = [
 export const sweCardConfig = [
   {
     title: "Recipes API Service",
-    desc: `Backend API allowing users to register, create recipes, and sort their recipes into custom categories.`,
-    sideText: ["Spring Boot", "Java", "MySQL"],
+    desc: `Backend API allowing users to register, create recipes, and sort their recipes into custom categories. Uses JPA Repository to access MySQL Database utilizing One to Many and Many to Many relationships.`,
+    sideText: ["Java", "MySQL", "Spring Boot"],
     inviteLink: "https://github.com/Simon-Cheek/recipes",
     searchTerms: ["JPARepository", "Database", "REST", "API", "Spring"],
   },
   {
     title: "Online Chess Application",
     desc: `Full Stack Command Line application allowing users to register, play chess, and observe games in real time. Created in fulfillment
-    of BYU's CS240 class. Features Websocketing, Encryption, Authentication, Spark API, and more!
+    of BYU's CS240 class. Features Websocketing, Encryption, Authentication, Test Driven Development, Java Spark, and more!
     `,
     sideText: ["Java", "MySQL", "Websocket"],
     inviteLink: "https://github.com/Simon-Cheek/chess",

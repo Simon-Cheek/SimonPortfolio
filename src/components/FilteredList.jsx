@@ -98,8 +98,11 @@ function ListCard({ title, desc, sideText, inviteLink, buttonText }) {
 
   const btnStyle = css`
     margin-top: 0.25em;
-    padding: 0.2em 0.75em;
-    border-radius: 12px;
+    padding: 0.35em 0.75em;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   `;
 
   return (
