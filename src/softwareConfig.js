@@ -35,6 +35,14 @@ export const sweExp = [
 
 export const sweCardConfig = [
   {
+    title: "Stock Simulator",
+    desc: `Next JS Typescript Full Stack App that allows users to trade stocks and see how they would fare in a simulated setting with $100,000 starting cash. Deployed using a Github Actions Pipeline
+    automatically deploying docker images to AWS ECR / ECS and managed using AWS Load Balancer. Hosted at stock.simoncheek.com.`,
+    sideText: ["Next.JS", "Gihub Actions", "Docker", "AWS"],
+    inviteLink: "https://github.com/Simon-Cheek/DeadlyNightsMod",
+    searchTerms: ["Next", "Typescript", "CICD", "CI/CD", "Javascript"],
+  },
+  {
     title: "Recipes API Service",
     desc: `Backend API allowing users to register, create recipes, and sort their recipes into custom categories. Uses JPA Repository to access MySQL Database utilizing One to Many and Many to Many relationships.`,
     sideText: ["Java", "MySQL", "Spring Boot"],
@@ -82,13 +90,6 @@ export const sweCardConfig = [
       "Websocket",
       "Javascript",
     ],
-  },
-  {
-    title: "Minecraft Mod",
-    desc: `The start of a Minecraft Mod designed to make the game more difficult and tense. Built using Gradle, Java, and other similar tools.`,
-    sideText: ["Java", "Gradle"],
-    inviteLink: "https://github.com/Simon-Cheek/DeadlyNightsMod",
-    searchTerms: [],
   },
   {
     title: "Cat App",

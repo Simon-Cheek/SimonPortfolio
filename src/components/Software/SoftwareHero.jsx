@@ -29,13 +29,15 @@ function HeroText() {
   `;
 
   const listItems = [
-    "C/C++",
-    "Flutter SDK",
+    "Next JS",
+    "TypeScript",
+    "Docker",
+    "Github Actions",
     "AWS",
-    "Bootstrap",
-    "Figma",
     "MySQL",
     "MongoDB",
+    "C/C++",
+    "Flutter",
   ];
   return (
     <div css={textContainerStyle}>
