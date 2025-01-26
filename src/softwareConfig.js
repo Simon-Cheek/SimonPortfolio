@@ -39,7 +39,7 @@ export const sweCardConfig = [
     desc: `Next JS Typescript Full Stack App that allows users to trade stocks and see how they would fare in a simulated setting with $100,000 starting cash. Deployed using a Github Actions Pipeline
     automatically deploying docker images to AWS ECR / ECS and managed using AWS Load Balancer. Hosted at stock.simoncheek.com. (Taken down due to AWS Hosting Costs)`,
     sideText: ["Next.JS", "Gihub Actions", "Docker", "AWS"],
-    inviteLink: "https://github.com/Simon-Cheek/DeadlyNightsMod",
+    inviteLink: "https://github.com/Simon-Cheek/StockSimulator",
     searchTerms: ["Next", "Typescript", "CICD", "CI/CD", "Javascript"],
   },
   {
