@@ -50,7 +50,7 @@ function SkillsPromo() {
         "Node",
         "UI / UX",
         "Figma",
-        "Unit Testing via Jest",
+        "Jest / Cypress Testing",
       ],
     },
     {
@@ -58,7 +58,7 @@ function SkillsPromo() {
       img: javaLogo,
       skills: [
         "Python",
-        "Java",
+        "Java / Spring Boot",
         "C++",
         "MySQL / MongoDB / DynamoDB",
         "Data Structures / Algorithms",
