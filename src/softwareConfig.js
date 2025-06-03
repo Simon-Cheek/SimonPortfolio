@@ -1,5 +1,15 @@
 export const sweExp = [
   {
+    title: "Software Engineer II",
+    company: "FamilySearch",
+    details: [
+      "Develop and maintain microservice architecture using Java / Spring Boot",
+      "Build persistence layers using PostgreSQL to manage records for millions of patrons and vendors",
+      "Automate data synchronization between production and beta environments to improve test quality",
+      "Reinforce excellent code quality for dozens of repositories with over 90% test coverage (JUnit, Mockito)",
+    ],
+  },
+  {
     title: "Web Intern",
     company: "FamilySearch",
     details: [
@@ -18,17 +28,6 @@ export const sweExp = [
       "Adjust design and layout using HTML/CSS/JS",
       "Maintain audio and video streaming via Javascript",
       "Counsel with team members and administration to oversee marketing and outreach efforts.",
-    ],
-  },
-  {
-    title: "Student",
-    company: "BYU - Provo",
-    details: [
-      "Music Composition Major / Computer Science Minor",
-      "3.99 GPA with Hinckley Scholarship, an Academic and Service oriented award",
-      "Music Scholarships with awards in Clarinet Performance and Composition",
-      "Coursework in Full Stack Web Dev, Data Structures, OOP, Systems, and more",
-      "VP: Developer's Club, Member of Music Student Advisory Council, plus dozens of Music Ensembles performing on and off campus",
     ],
   },
 ];

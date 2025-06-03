@@ -22,16 +22,15 @@ export const softwareResumeConfig = {
   title: "Software",
   desc1: `As a Full Stack Developer, I take pride in
           designing and implementing software by writing scalable, 
-          maintainable code that lasts. I have honed my coding skills through
-          Computer Science coursework at BYU, online at UDemy, work experience,
-          Hackathons, and personal projects!
+          maintainable code that lasts, ranging from React and Next.js
+          to Java Spring Boot Microservices.
   `,
   desc2: `Some recent highlights in my personal and work life include:`,
   resume: "sweResume.pdf",
   listItems: [
-    "Current Web Developer Intern at FamilySearch (React, Node, TypeScript)",
-    "Previous Student Web Developer, BYU School of Music (HTML/CSS/JS)",
-    "BYU Developer's Club Member (2023-)",
-    "Personal Projects in Python, Java, Javascript, C++, and more!",
+    "Software Engineer II, FamilySearch (Java, Spring Boot, PostgreSQL)",
+    "Previous Web Development Intern, FamilySearch (React, Express, AWS)",
+    "MS CS, Georgia Tech '28",
+    "VP, BYU Developer's Club: 24-25",
   ],
 };
