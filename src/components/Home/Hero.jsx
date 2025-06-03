@@ -52,9 +52,9 @@ function HeroText() {
       <H1 customCSS={h1Style}>SIMON CHEEK</H1>
       <Separator size="md" />
       <Paragraph customCSS={pStyle} weight="semibold">
-        As a <span css={spanStyle}>Music / Computer Science</span> student at
-        Brigham Young University, my passion for both innovation and technical
-        expertise makes me a wonderful fit for your team!
+        Welcome to my portfolio! I am a music and computer science graduate of
+        BYU (current GA Tech student). Here you'll find what I've been up to in
+        recent creative / technical endeavors.
       </Paragraph>
       <Separator size="md" />
       <div>

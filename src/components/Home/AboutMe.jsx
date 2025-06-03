@@ -104,16 +104,16 @@ function AboutTimeline() {
   return (
     <div css={timelineStyle}>
       <TimelineEntry
-        primaryText="Web Developer Intern"
+        primaryText="Software Engineer II"
+        secondaryText="2025 - FamilySearch"
+      />
+      <TimelineEntry
+        primaryText="Web Development Intern"
         secondaryText="2024 - FamilySearch"
       />
       <TimelineEntry
-        primaryText="Student Web Developer"
+        primaryText="Web Developer"
         secondaryText="2023 - BYU School of Music"
-      />
-      <TimelineEntry
-        primaryText="Teaching Assistant"
-        secondaryText="2022 - BYU School of Music"
       />
     </div>
   );
