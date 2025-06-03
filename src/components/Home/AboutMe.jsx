@@ -45,11 +45,11 @@ function AboutText() {
       <div>
         <H2 customCSS={h2Style}>About Me</H2>
         <Paragraph customCSS={pStyle}>
-          Hello! My name is <span css={spanStyle}>Simon Cheek</span> and I am an
-          undergraduate student at Brigham Young University. My passion is
-          twofold- I dedicate myself to creating works of music ranging from
-          solos to large orchestral works as well as software that is efficient,
-          intuitive, and scalable!
+          Hello! My name is <span css={spanStyle}>Simon Cheek</span> and I am a
+          BYU graduate and Georgia Tech student. My passion is twofold- I
+          dedicate myself to creating works of music ranging from solos to large
+          orchestral works as well as software that is efficient, intuitive, and
+          scalable!
         </Paragraph>
       </div>
     </div>
