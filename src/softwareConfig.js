@@ -43,12 +43,25 @@ export const sweCardConfig = [
     desc: `A series of distributed systems implementations built against Fly.io's Maelstrom test harness, progressing from broadcast and unique ID generation through a Kafka-style commit log using compare-and-swap offset allocation on a linearizable store, to a multi-node key-value store that propagates writes via gossip.`,
     sideText: ["Go", "Distributed Systems", "Consensus"],
     inviteLink: "https://github.com/Simon-Cheek/scheek-maelstrom",
-    searchTerms: ["Distributed Systems", "Go", "Gossip", "Kafka", "Consensus", "Maelstrom"],
+    searchTerms: [
+      "Distributed Systems",
+      "Go",
+      "Gossip",
+      "Kafka",
+      "Consensus",
+      "Maelstrom",
+    ],
   },
   {
     title: "Distributed File System",
     desc: `A distributed file system built for Georgia Tech's graduate Operating Systems coursework, focused on RPC-based communication and concurrency control across nodes. Source is part of a GT course and not publicly shared.`,
     sideText: ["C++", "gRPC", "Concurrency"],
-    searchTerms: ["Distributed Systems", "C++", "gRPC", "Networks", "Georgia Tech"],
+    searchTerms: [
+      "Distributed Systems",
+      "C++",
+      "gRPC",
+      "Networks",
+      "Georgia Tech",
+    ],
   },
 ];

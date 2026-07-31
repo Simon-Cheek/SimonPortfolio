@@ -8,7 +8,7 @@ export const resumeConfig = {
   listItems: [
     "Software Engineer II, FamilySearch (Java, Spring Boot, Cassandra, Redis, AWS)",
     "MS Computer Science, Georgia Tech — Computing Systems (2028)",
-    "First-author research on internet infrastructure resilience, PETS/FOCI 2026",
+    "First-author research on internet measurement, PETS/FOCI 2026",
     "Building SimonMQ, a Go message broker with WAL-based durability and crash recovery",
   ],
 };

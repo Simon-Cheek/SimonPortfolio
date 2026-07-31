@@ -4,30 +4,38 @@
 export const heroConfig = {
   eyebrow: "Software Engineer — Distributed Systems & Infra",
   name: "SIMON CHEEK",
-  bio: `I build backend systems that hold up under load — from Cassandra
-        clusters serving 7M+ requests/hour in production to a message broker
-        I wrote from scratch to understand exactly how write-ahead logs and
-        crash recovery work.`,
+  bio: `I build backend systems that hold up under load, from production
+      services handling millions of requests to personal projects where I dig
+      into exactly how distributed systems work under the hood.`,
   ctaLabel: "Resume",
   ctaTo: "/resume",
 };
 
 export const aboutConfig = {
-  bio: `Software Engineer II at FamilySearch, currently pursuing an MS in
-        Computer Science (Computing Systems) at Georgia Tech. I like backend
-        systems where correctness under failure actually matters — queues,
-        logs, caches, and the internet infrastructure underneath all of it.`,
+  bio: `I am a Software Engineer II at FamilySearch while pursuing an MSCS (Computing Systems) at Georgia Tech.
+        I specialize in building infrastructure that scales through understanding what happens behind the
+        scenes. My primary interests are in Distributed Systems, Networks, and Storage, with secondary interests
+        in Machine Learning Systems and Cloud Infrastructure.`,
   timeline: [
-    { primaryText: "Software Engineer II", secondaryText: "2025 - FamilySearch" },
-    { primaryText: "Web Development Intern", secondaryText: "2024 - FamilySearch" },
-    { primaryText: "Web Developer", secondaryText: "2023 - BYU School of Music" },
+    {
+      primaryText: "Software Engineer II",
+      secondaryText: "2025 - FamilySearch",
+    },
+    {
+      primaryText: "Web Development Intern",
+      secondaryText: "2024 - FamilySearch",
+    },
+    {
+      primaryText: "Web Developer",
+      secondaryText: "2023 - BYU School of Music",
+    },
   ],
 };
 
 export const skillsConfig = [
   {
     title: "LANGUAGES",
-    skills: ["Go", "Java", "TypeScript", "Python", "C / C++"],
+    skills: ["Go", "Java", "TypeScript", "Python", "C", "C++"],
   },
   {
     title: "DISTRIBUTED SYSTEMS & DATA",
@@ -49,22 +57,24 @@ export const skillsConfig = [
       "Docker",
       "Kubernetes",
       "GitHub Actions / CI-CD",
+      "Splunk / Dynatrace",
     ],
   },
 ];
 
 export const featuredProjectConfig = {
-  title: "SimonMQ — Durable-MQ",
-  tagline: "A message broker built to understand durability, not just use it.",
-  description: `Durable-MQ is a Go message broker I built from the ground up,
-    progressing from an in-memory queue to a fully WAL-backed system with
+  title: "SimonMQ: Message Queues from Scratch",
+  tagline:
+    "Message Queues designed to train storage and distributed systems fundamentals.",
+  description: `SimonMQ is a Go message broker I built from the ground up,
+    progressing from an in-memory queue to a fully WAL-backed pub/sub system with
     crash recovery. Every operation is appended to a segmented, checksummed
-    write-ahead log before being applied in memory; on restart, the entire
-    broker state — queues, subscribers, in-flight delivery status — is
-    reconstructed purely by replaying the log in LSN order. Acks are only
+    write-ahead log before being applied in memory. On restart, the entire
+    broker state (including queues, subscribers, and in-flight delivery state) is
+    reconstructed by replaying the log in LSN order. Acks are only
     applied in memory after the WAL append succeeds, so a crash can never
-    lose a delivery the log doesn't know about. Currently adding Raft-based
-    replication.`,
+    lose a delivery the log doesn't know about. Coming soon: Raft-based replication with
+    automated Kubernetes deployment.`,
   stack: ["Go", "Write-Ahead Logging", "HTTP", "Concurrency"],
   links: [
     { label: "View on GitHub", href: "https://github.com/Simon-Cheek/simonMQ" },
@@ -72,7 +82,7 @@ export const featuredProjectConfig = {
 };
 
 export const researchConfig = {
-  text: `I'm a member of Georgia Tech's Internet Intelligence Lab. My
+  text: `I'm also a member of Georgia Tech's Internet Intelligence Lab. My
     first-author research on internet infrastructure resilience — analysis
     of network shutdown patterns at national scale — was accepted to
     PETS/FOCI 2026, and I'm currently working on a follow-up project on
