@@ -6,9 +6,10 @@ function Card({ children, customCSS, fullShadow = false }) {
   const cardStyle = css`
     padding: 1em;
     margin: 4px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    background-color: ${colors.gray01}6a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    border: 1px solid ${colors.borderSubtle};
+    border-radius: 12px;
+    background-color: ${colors.bgSurface};
   `;
 
   const fullStyle = fullShadow

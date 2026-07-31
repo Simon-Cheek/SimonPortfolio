@@ -24,26 +24,29 @@ function Contact() {
           If you would like to get in touch with me, the best way to do so is
           via Email:
         </Paragraph>
-        <Paragraph weight="semibold">simon.cheek@yahoo.com</Paragraph>
+        <Paragraph weight="semibold">
+          <a href="mailto:simon.cheek@yahoo.com">simon.cheek@yahoo.com</a>
+        </Paragraph>
         <Separator size="lg" />
         <Paragraph customCSS={pStyle}>
           Other potential pages of interest are listed here:
         </Paragraph>
         <Separator />
-        <Btn
-          to="https://www.linkedin.com/in/simon-cheek-83726b175/"
-          color="blue"
+        <a
+          href="https://www.linkedin.com/in/simon-cheek/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          LinkedIn
-        </Btn>
+          <Btn color="accent">LinkedIn</Btn>
+        </a>
         <Separator />
-        <Btn to="https://github.com/Simon-Cheek" color="blue">
-          GitHub
-        </Btn>
-        <Separator />
-        <Btn to="https://www.youtube.com/@simoncheek992" color="blue">
-          YouTube
-        </Btn>
+        <a
+          href="https://github.com/Simon-Cheek"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Btn color="accent">GitHub</Btn>
+        </a>
       </div>
     </>
   );

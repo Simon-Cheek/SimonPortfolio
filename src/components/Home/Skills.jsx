@@ -1,155 +1,133 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { H2, H4, H6, Paragraph } from "../Text";
+import { H2, Mono, Paragraph } from "../Text";
 import { colors } from "../../styles/colors";
 import Card from "../Card";
-
-import javaLogo from "../../assets/java-logo.png";
-import reactLogo from "../../assets/react-logo.png";
-import musicLogo from "../../assets/treble-clef.png";
 import Separator from "../Separator";
 import Btn from "../Button";
+import FeaturedProject from "./FeaturedProject";
+import {
+  skillsConfig,
+  featuredProjectConfig,
+  researchConfig,
+} from "../../homeConfig";
 
-function SkillsList({ skills }) {
-  const listStyle = css`
-    display: flex;
-    flex-direction: column;
-    padding: 1em 0;
-    align-items: center;
+function SkillsCategory({ title, skills }) {
+  const cardStyle = css`
+    margin: 0.75em;
+    width: 260px;
   `;
 
-  const pStyle = css`
-    font-size: 0.9em;
-    font-weight: 600;
-    text-align: center;
+  const innerStyle = css`
+    padding: 0.5em;
+  `;
+
+  const titleStyle = css`
+    color: ${colors.accent03};
+    letter-spacing: 1px;
+    font-size: 0.85em;
+  `;
+
+  const chipListStyle = css`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.75em;
+  `;
+
+  const chipStyle = css`
+    border: 1px solid ${colors.borderSubtle};
+    border-radius: 10px;
+    padding: 0.65em 1.4em;
+    line-height: 1.4;
+    color: ${colors.textSecondary};
+    font-size: 0.8em;
+    max-width: 100%;
   `;
 
   return (
-    <div css={listStyle}>
-      {skills &&
-        skills.map((skill) => (
-          <Paragraph key={skill} customCSS={pStyle}>
-            {skill}
-          </Paragraph>
-        ))}
-    </div>
+    <Card customCSS={cardStyle}>
+      <div css={innerStyle}>
+        <Mono customCSS={titleStyle}>{title}</Mono>
+        <div css={chipListStyle}>
+          {skills.map((skill) => (
+            <Mono key={skill} customCSS={chipStyle}>
+              {skill}
+            </Mono>
+          ))}
+        </div>
+      </div>
+    </Card>
   );
 }
 
 function SkillsPromo() {
-  const skillsCards = [
-    {
-      title: "WEB DEVELOPMENT",
-      img: reactLogo,
-      skills: [
-        "HTML",
-        "CSS",
-        "Javascript / TypeScript",
-        "Bootstrap",
-        "React",
-        "Node",
-        "UI / UX",
-        "Figma",
-        "Jest / Cypress Testing",
-      ],
-    },
-    {
-      title: "SOFTWARE ENGINEERING",
-      img: javaLogo,
-      skills: [
-        "Python",
-        "Java / Spring Boot",
-        "C++",
-        "MySQL / MongoDB / DynamoDB",
-        "Data Structures / Algorithms",
-        "SDLC & CI/CD",
-        "AWS (EC2, Lambda, CDK, and More)",
-        "Flutter SDK",
-      ],
-    },
-    {
-      title: "MUSIC",
-      img: musicLogo,
-      skills: [
-        "Music Composition",
-        "Arranging / Copying",
-        "Orchestration",
-        "Clarinet Performance",
-        "Teaching Experience",
-      ],
-    },
-  ];
-
   const skillStyle = css`
     display: flex;
+    flex-wrap: wrap;
     padding: 0 2em;
     justify-content: center;
-    align-items: center;
-    @media (max-width: 1023px) {
-      flex-direction: column;
-    }
-  `;
-
-  const skillCardStyle = css`
-    margin: 0 1em;
-    max-width: 85vw;
-    max-height: 430px;
-    transition: transform 0.5s;
-    &:hover {
-      transform: scale(1.05);
-    }
-    @media (max-width: 1023px) {
-      margin: 2em 0;
-      width: 350px;
-    }
-  `;
-
-  const innerCardStyle = css`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 400px;
-    min-width: 200px;
-    padding: 1em 0.5em;
-  `;
-
-  const imgStyle = css`
-    height: 52px;
-    width: 52px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 0.5em;
-  `;
-
-  const headerStyle = css`
-    font-style: italic;
-    color: ${colors.brown07};
-    letter-spacing: 1px;
-    margin: 0.5em 0;
-    font-size: 0.9em;
-    text-align: center;
+    align-items: stretch;
   `;
 
   return (
     <div css={skillStyle}>
-      {skillsCards.map((card) => (
-        <Card key={card.title} customCSS={skillCardStyle}>
-          <div css={innerCardStyle}>
-            <img src={card.img} css={imgStyle} />
-            <H6 customCSS={headerStyle}>{card.title}</H6>
-            <SkillsList skills={card.skills} />
-          </div>
-        </Card>
+      {skillsConfig.map((category) => (
+        <SkillsCategory key={category.title} {...category} />
       ))}
+    </div>
+  );
+}
+
+function ResearchStrip() {
+  const wrapStyle = css`
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5em;
+  `;
+
+  const pStyle = css`
+    color: ${colors.textSecondary};
+    font-size: 0.95em;
+    line-height: 1.5;
+  `;
+
+  const linkStyle = css`
+    color: ${colors.accent03};
+    text-decoration: none;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  `;
+
+  return (
+    <div css={wrapStyle}>
+      <Paragraph customCSS={pStyle}>
+        {researchConfig.text}
+        {researchConfig.linkHref && (
+          <>
+            {" "}
+            <a
+              href={researchConfig.linkHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              css={linkStyle}
+            >
+              {researchConfig.linkLabel} →
+            </a>
+          </>
+        )}
+      </Paragraph>
     </div>
   );
 }
 
 function Header() {
   const headerStyle = css`
-    font-style: italic;
-    color: ${colors.blue07};
-    font-weight: 600;
+    color: ${colors.textPrimary};
+    font-weight: 700;
   `;
 
   return (
@@ -163,7 +141,7 @@ function ResumeBtn() {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <a href="/sweResume.pdf" download="sweResume.pdf">
-        <Btn color="blue" shade="light" gradient long>
+        <Btn color="accent" gradient long>
           Download Resume
         </Btn>
       </a>
@@ -174,8 +152,12 @@ function ResumeBtn() {
 function Skills() {
   return (
     <>
-      <Header />
+      <FeaturedProject {...featuredProjectConfig} />
       <Separator size="xl" />
+      <ResearchStrip />
+      <Separator size="xl" />
+      <Header />
+      <Separator size="lg" />
       <SkillsPromo />
       <Separator size="xl" />
       <ResumeBtn />

@@ -5,8 +5,7 @@ import { H2 } from "./Text";
 
 function PageHeader({ header }) {
   const headerStyle = css`
-    font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
   `;
 

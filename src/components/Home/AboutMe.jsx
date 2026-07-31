@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import { colors } from "../../styles/colors";
 import { H2, H3, H5, Paragraph } from "../Text";
-import BlueRow from "../BlueRow";
+import { aboutConfig } from "../../homeConfig";
 
 function AboutText() {
   const formatStyle = css`
@@ -13,9 +13,8 @@ function AboutText() {
   `;
 
   const h2Style = css`
-    color: ${colors.gray08};
-    font-style: italic;
-    font-weight: 600 !important;
+    color: ${colors.textPrimary};
+    font-weight: 700;
     @media (max-width: 767px) {
       text-align: center;
     }
@@ -23,34 +22,19 @@ function AboutText() {
 
   const pStyle = css`
     max-width: 500px;
-    color: ${colors.blue09};
+    color: ${colors.textSecondary};
     font-size: 0.95em;
+    line-height: 1.5;
     @media (max-width: 767px) {
       text-align: center;
     }
-  `;
-
-  const spanStyle = css`
-    font-size: 1.3em;
-    font-weight: 600;
-    margin: 0 4px;
-    padding: 0;
-    color: ${colors.blue06};
-    font-style: italic;
-    line-height: 0;
   `;
 
   return (
     <div css={formatStyle}>
       <div>
         <H2 customCSS={h2Style}>About Me</H2>
-        <Paragraph customCSS={pStyle}>
-          Hello! My name is <span css={spanStyle}>Simon Cheek</span> and I am a
-          BYU graduate and Georgia Tech student. My passion is twofold- I
-          dedicate myself to creating works of music ranging from solos to large
-          orchestral works as well as software that is efficient, intuitive, and
-          scalable!
-        </Paragraph>
+        <Paragraph customCSS={pStyle}>{aboutConfig.bio}</Paragraph>
       </div>
     </div>
   );
@@ -58,10 +42,9 @@ function AboutText() {
 
 function TimelineEntry({ primaryText, secondaryText }) {
   const entryStyle = css`
-    background-color: ${colors.gray00}99;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
-    border-top-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    background-color: ${colors.bgSurface};
+    border: 1px solid ${colors.borderSubtle};
+    border-radius: 12px;
     padding: 0.5em 3em;
     margin: 0.6em;
     width: 380px;
@@ -73,14 +56,13 @@ function TimelineEntry({ primaryText, secondaryText }) {
   const primaryStyle = css`
     padding: 0;
     margin: 0;
-    font-style: italic;
-    color: ${colors.brown07};
+    color: ${colors.textPrimary};
     font-weight: 600;
     font-size: 1.2em;
   `;
 
   const secondaryStyle = css`
-    color: ${colors.gray09};
+    color: ${colors.accent03};
     font-size: 0.8em;
   `;
 
@@ -103,18 +85,13 @@ function AboutTimeline() {
 
   return (
     <div css={timelineStyle}>
-      <TimelineEntry
-        primaryText="Software Engineer II"
-        secondaryText="2025 - FamilySearch"
-      />
-      <TimelineEntry
-        primaryText="Web Development Intern"
-        secondaryText="2024 - FamilySearch"
-      />
-      <TimelineEntry
-        primaryText="Web Developer"
-        secondaryText="2023 - BYU School of Music"
-      />
+      {aboutConfig.timeline.map((entry) => (
+        <TimelineEntry
+          key={entry.primaryText}
+          primaryText={entry.primaryText}
+          secondaryText={entry.secondaryText}
+        />
+      ))}
     </div>
   );
 }
@@ -132,10 +109,10 @@ function AboutMe() {
   `;
 
   return (
-    <BlueRow customCSS={aboutStyle}>
+    <div css={aboutStyle}>
       <AboutText />
       <AboutTimeline />
-    </BlueRow>
+    </div>
   );
 }
 

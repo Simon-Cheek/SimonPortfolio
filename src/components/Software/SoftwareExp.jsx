@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import BlueRow from "../BlueRow";
-import { H3, H5, H6 } from "../Text";
+import { H3, H5, Mono } from "../Text";
 import { colors } from "../../styles/colors";
 import BulletedList from "../BulletedList";
 import { sweExp } from "../../softwareConfig";
@@ -21,16 +20,24 @@ function ExpSection({ title, company, details }) {
   const headerStyle = css`
     text-align: center;
   `;
+  const companyStyle = css`
+    color: ${colors.accent03};
+    letter-spacing: 0.5px;
+  `;
+  const titleStyle = css`
+    color: ${colors.textPrimary};
+  `;
   const itemStyle = css`
     margin: 0;
     padding: 0;
     font-size: 0.75em;
+    color: ${colors.textSecondary};
   `;
   return (
     <div css={containerStyle}>
       <div css={headerStyle}>
-        <H6>{company}</H6>
-        <H5>{title}</H5>
+        <Mono customCSS={companyStyle}>{company}</Mono>
+        <H5 customCSS={titleStyle}>{title}</H5>
       </div>
       <Separator size="xs" />
       <BulletedList
@@ -45,9 +52,8 @@ function ExpSection({ title, company, details }) {
 
 function SoftwareExp() {
   const headerStyle = css`
-    color: ${colors.blue08};
-    font-style: italic;
-    font-weight: 600;
+    color: ${colors.textPrimary};
+    font-weight: 700;
     font-size: 1.75em;
     text-align: center;
   `;
@@ -60,9 +66,9 @@ function SoftwareExp() {
     }
   `;
   return (
-    <BlueRow>
+    <div>
       <Separator />
-      <H3 customCSS={headerStyle}>Work and Educational Experience</H3>
+      <H3 customCSS={headerStyle}>Experience</H3>
       <Separator size="lg" />
       <div css={containerStyle}>
         {sweExp.map((exp) => (
@@ -75,7 +81,7 @@ function SoftwareExp() {
         ))}
       </div>
       <Separator />
-    </BlueRow>
+    </div>
   );
 }
 

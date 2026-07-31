@@ -4,6 +4,8 @@ import { Paragraph } from "../Text";
 import SimonClarinet from "../../assets/SimonClarinet.png";
 import { colors } from "../../styles/colors";
 import Separator from "../Separator";
+import Btn from "../Button";
+import { musicResumeConfig } from "../../musicConfig";
 
 function MusicHeroVisual() {
   const imgStyle = css`
@@ -128,6 +130,12 @@ function MusicHeroMain() {
           Grand Prize in the Vera Mayhew Music Composition Contest (open to all
           BYU students) in 2020, 2022, and 2024.
         </Paragraph>
+        <Separator />
+        <a href={`/${musicResumeConfig.resume}`} download={musicResumeConfig.resume}>
+          <Btn color="accent" shade="dark">
+            Download Music Resume
+          </Btn>
+        </a>
       </div>
     </div>
   );
@@ -139,11 +147,6 @@ function MusicHero() {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  `;
-
-  const headerStyle = css`
-    font-style: italic;
-    font-weight: 600;
   `;
 
   return (

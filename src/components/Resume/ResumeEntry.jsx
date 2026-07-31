@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { H3, H4, Paragraph } from "../Text";
+import { H4, Paragraph } from "../Text";
 import Separator from "../Separator";
 import Btn from "../Button";
 import Card from "../Card";
@@ -9,7 +9,7 @@ import BulletedList from "../BulletedList";
 
 function ResumeEntry({ title, desc1, desc2, listItems, resume }) {
   const headerStyle = css`
-    font-style: italic;
+    color: ${colors.textPrimary};
   `;
 
   const containerStyle = css`
@@ -19,10 +19,15 @@ function ResumeEntry({ title, desc1, desc2, listItems, resume }) {
   `;
 
   const cardStyle = css`
-    background-color: ${colors.brown00}a6;
     margin: 1.5em;
     max-width: 600px;
-    flex: 1;
+    width: 90%;
+  `;
+
+  const pStyle = css`
+    color: ${colors.textSecondary};
+    text-align: center;
+    line-height: 1.5;
   `;
 
   return (
@@ -30,22 +35,17 @@ function ResumeEntry({ title, desc1, desc2, listItems, resume }) {
       <div css={containerStyle}>
         <H4 customCSS={headerStyle}>{title}</H4>
         <Separator />
-        <Paragraph weight="semibold">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {desc1}
+        <Paragraph weight="semibold" customCSS={pStyle}>
+          {desc1}
         </Paragraph>
         <Separator size="sm" />
         <a href={`/${resume}`} download={resume}>
-          <Btn color="blue" shade="light" long>
-            Resume
+          <Btn color="accent" gradient long>
+            Download Resume
           </Btn>
         </a>
         <Separator size="sm" />
-        <Paragraph
-          weight="semibold"
-          customCSS={css`
-            text-align: center;
-          `}
-        >
+        <Paragraph weight="semibold" customCSS={pStyle}>
           {desc2}
         </Paragraph>
         <Separator size="sm" />

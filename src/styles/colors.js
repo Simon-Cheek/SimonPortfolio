@@ -34,5 +34,28 @@ export const colors = {
   gray08: "#1A1C1F",
   gray09: "#0A0A0F",
 
+  // Accent ramp for the dark theme (cyan/teal) - full 00-09 ramp required
+  // so Btn's `colors[`${color}0${N}`]` derivation keeps working.
+  accent00: "#E3FBF7",
+  accent01: "#B4F1E8",
+  accent02: "#7FE4D6",
+  accent03: "#4CD3C0",
+  accent04: "#2BB8A6",
+  accent05: "#1E9686",
+  accent06: "#16786C",
+  accent07: "#105C53",
+  accent08: "#0A413B",
+  accent09: "#052723",
+
   white: "#fbfbfe",
+
+  // Semantic aliases for the dark theme - plain keys (not a ramp), so Btn
+  // never resolves these via its `${color}0${N}` interpolation.
+  bgPage: "#0A0A0F",
+  bgSurface: "#1A1C1F",
+  bgSurfaceRaised: "#33363b",
+  textPrimary: "#fbfbfe",
+  textSecondary: "#A7ABB5",
+  textMuted: "#636770",
+  borderSubtle: "#484B53",
 };

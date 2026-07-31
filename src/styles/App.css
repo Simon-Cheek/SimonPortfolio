@@ -1,6 +1,6 @@
 /* Global styles are to be identified here */
+/* Background/text color are set via an Emotion Global block in App.jsx so they stay driven by colors.js */
 
 body {
   margin-top: 64px !important;
-  background-color: #f8fafd !important;
 }

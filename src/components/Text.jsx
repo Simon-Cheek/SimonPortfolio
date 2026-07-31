@@ -19,7 +19,7 @@ export function Paragraph({ children, weight = "normal", customCSS }) {
   }
 
   const pStyle = css`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 4px 0;
     font-weight: ${fontWgt};
@@ -30,7 +30,7 @@ export function Paragraph({ children, weight = "normal", customCSS }) {
 
 export function H1({ children, customCSS }) {
   const h1Style = css`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 3em;
     font-weight: 700;
     margin: 8px 4px;
@@ -42,7 +42,7 @@ export function H1({ children, customCSS }) {
 
 export function H2({ children, customCSS }) {
   const h2Style = css`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 2.5em;
     font-weight: 700;
     margin: 8px 4px;
@@ -54,7 +54,7 @@ export function H2({ children, customCSS }) {
 
 export function H3({ children, customCSS }) {
   const h3Style = css`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 2em;
     font-weight: 700;
     margin: 4px 4px;
@@ -66,7 +66,7 @@ export function H3({ children, customCSS }) {
 
 export function H4({ children, customCSS }) {
   const h4Style = css`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.5em;
     font-weight: 700;
     margin: 4px 4px;
@@ -78,7 +78,7 @@ export function H4({ children, customCSS }) {
 
 export function H5({ children, customCSS }) {
   const h5Style = css`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.2em;
     font-weight: 700;
     margin: 0 4px;
@@ -90,7 +90,7 @@ export function H5({ children, customCSS }) {
 
 export function H6({ children, customCSS }) {
   const h6Style = css`
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 0.8em;
     font-weight: 700;
     margin: 0 4px;
@@ -98,4 +98,14 @@ export function H6({ children, customCSS }) {
   `;
 
   return <h6 css={[h6Style, customCSS]}>{children}</h6>;
+}
+
+export function Mono({ children, customCSS }) {
+  const monoStyle = css`
+    font-family: "JetBrains Mono", monospace;
+    margin: 0;
+    padding: 0;
+  `;
+
+  return <span css={[monoStyle, customCSS]}>{children}</span>;
 }
