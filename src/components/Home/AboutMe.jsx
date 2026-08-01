@@ -100,7 +100,7 @@ function AboutTimeline() {
 function AboutMe() {
   const aboutStyle = css`
     max-width: ${HOME_ROW_MAX_WIDTH};
-    margin: 0 auto 24px;
+    margin: 0 auto 60px;
     padding: ${HOME_ROW_PADDING};
     display: flex;
     justify-content: space-between;
