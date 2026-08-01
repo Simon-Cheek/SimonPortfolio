@@ -4,9 +4,9 @@
 export const heroConfig = {
   eyebrow: "Software Engineer — Distributed Systems & Infra",
   name: "SIMON CHEEK",
-  bio: `I build backend systems that hold up under load, from production
-      services handling millions of requests to personal projects where I dig
-      into exactly how distributed systems work under the hood.`,
+  bio: `I build backend systems that hold up under load — production
+      services handling millions of requests at work, and personal
+      projects where I dig into how distributed systems actually function.`,
   ctaLabel: "Resume",
   ctaTo: "/resume",
 };

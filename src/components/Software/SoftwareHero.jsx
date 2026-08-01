@@ -54,8 +54,8 @@ function SoftwareHero() {
       <Paragraph weight="semibold">As a</Paragraph>
       <H3 customCSS={h3Style}>Backend & Distributed Systems Engineer,</H3>
       <Paragraph weight="semibold" customCSS={pStyle}>
-        I build software across the stack, with a focus on backend systems
-        and infrastructure. Here's the toolset I reach for most:
+        I build software end-to-end, with a focus on backend systems and
+        infrastructure. The stack I work in:
       </Paragraph>
       {skillsConfig.map((category) => (
         <div key={category.title} css={categoryStyle}>

@@ -11,7 +11,7 @@ import SimonPic from "../../assets/SimonPortPic.jpg";
 
 function HeroText() {
   const mainStyle = css`
-    max-width: 480px;
+    max-width: 580px;
     padding: 12px;
     @media (max-width: 1023px) {
       text-align: center;
@@ -20,22 +20,26 @@ function HeroText() {
 
   const pStyle = css`
     color: ${colors.textSecondary};
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 1.1em;
+    line-height: 1.6;
   `;
 
   const eyebrowStyle = css`
     color: ${colors.accent03};
-    font-size: 0.95em;
+    font-size: 1em;
     letter-spacing: 0.5px;
   `;
 
   const h1Style = css`
     color: ${colors.textPrimary};
+    font-size: 3.6em;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 0;
+    @media (max-width: 1023px) {
+      font-size: 2.6em;
+    }
   `;
 
   const ctaRowStyle = css`
@@ -68,7 +72,7 @@ function HeroText() {
 
 function HeroVisual() {
   const containerStyle = css`
-    width: 220px;
+    width: 260px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,8 +80,8 @@ function HeroVisual() {
   `;
 
   const imgStyle = css`
-    height: 260px;
-    width: 220px;
+    height: 310px;
+    width: 260px;
     border-radius: 12px;
     border: 1px solid ${colors.borderSubtle};
     object-fit: cover;
@@ -90,14 +94,24 @@ function HeroVisual() {
   );
 }
 
+// Shared with AboutMe.jsx so the two sections' columns share the same
+// horizontal anchor points instead of drifting based on each section's own
+// content width. Keep these two values in sync if either changes.
+export const HOME_ROW_MAX_WIDTH = "1140px";
+export const HOME_ROW_PADDING = "0 3em";
+
 function Hero() {
   const heroStyle = css`
+    max-width: ${HOME_ROW_MAX_WIDTH};
+    margin: 0 auto;
+    padding: ${HOME_ROW_PADDING};
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    min-height: 540px;
+    min-height: 720px;
     @media (max-width: 1023px) {
       flex-direction: column;
+      justify-content: center;
     }
   `;
 

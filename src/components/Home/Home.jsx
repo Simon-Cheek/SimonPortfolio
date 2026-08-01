@@ -9,6 +9,7 @@ function Home() {
   return (
     <>
       <Hero />
+      <Separator size="lg" />
       <AboutMe />
       <Separator size="lg" />
       <Skills />

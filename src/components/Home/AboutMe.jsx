@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { colors } from "../../styles/colors";
 import { H2, H3, H5, Paragraph } from "../Text";
 import { aboutConfig } from "../../homeConfig";
+import { HOME_ROW_MAX_WIDTH, HOME_ROW_PADDING } from "./Hero";
 
 function AboutText() {
   const formatStyle = css`
@@ -98,12 +99,15 @@ function AboutTimeline() {
 
 function AboutMe() {
   const aboutStyle = css`
-    min-height: 300px;
-    margin-bottom: 60px;
+    max-width: ${HOME_ROW_MAX_WIDTH};
+    margin: 0 auto 24px;
+    padding: ${HOME_ROW_PADDING};
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     @media (max-width: 1023px) {
       flex-direction: column;
+      align-items: center;
       padding-top: 1em;
     }
   `;
