@@ -73,9 +73,9 @@ export const featuredProjectConfig = {
     broker state (including queues, subscribers, and in-flight delivery state) is
     reconstructed by replaying the log in LSN order. Acks are only
     applied in memory after the WAL append succeeds, so a crash can never
-    lose a delivery the log doesn't know about. Coming soon: Raft-based replication with
+    lose a delivery the log doesn't know about. In Progress: Raft-based replication with
     automated Kubernetes deployment.`,
-  stack: ["Go", "Write-Ahead Logging", "HTTP", "Concurrency"],
+  stack: ["Go", "Write-Ahead Logging", "Raft", "Concurrency"],
   links: [
     { label: "View on GitHub", href: "https://github.com/Simon-Cheek/simonMQ" },
   ],
@@ -88,6 +88,5 @@ export const researchConfig = {
     PETS/FOCI 2026, and I'm currently working on a follow-up project on
     global-scale traceroute measurement.`,
   linkLabel: "View Paper",
-  // TODO(simon): drop in the actual paper/Zenodo URL once available.
-  linkHref: "",
+  linkHref: "https://www.petsymposium.org/foci/2026/foci-2026-0015.pdf",
 };
