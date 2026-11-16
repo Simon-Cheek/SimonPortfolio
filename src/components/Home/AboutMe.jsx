@@ -105,6 +105,10 @@ function AboutMe() {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Desktop only: sit 20px closer to the hero above. */
+    @media (min-width: 1024px) {
+      margin-top: -20px;
+    }
     @media (max-width: 1023px) {
       flex-direction: column;
       align-items: center;

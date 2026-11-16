@@ -6,6 +6,7 @@ export const resumeConfig = {
   desc2: `Highlights:`,
   resume: "sweResume.pdf",
   listItems: [
+    "Full Stack Engineer III, onX Maps (GoLang, Elixir, Rust, Python, Typescript, Swift, Kotlin, GCP, K8s)",
     "Software Engineer II, FamilySearch (Java, Spring Boot, Cassandra, Redis, AWS)",
     "MS Computer Science, Georgia Tech — Computing Systems (2028)",
     "First-author research on internet measurement, PETS/FOCI 2026",

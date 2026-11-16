@@ -12,11 +12,15 @@ export const heroConfig = {
 };
 
 export const aboutConfig = {
-  bio: `I am a Software Engineer II at FamilySearch while pursuing an MSCS (Computing Systems) at Georgia Tech.
+  bio: `I am a Full Stack Engineer III at onX Maps while pursuing an MSCS (Computing Systems) at Georgia Tech.
         I specialize in building infrastructure that scales through understanding what happens behind the
         scenes. My primary interests are in Distributed Systems, Networks, and Storage, with secondary interests
         in Machine Learning Systems and Cloud Infrastructure.`,
   timeline: [
+    {
+      primaryText: "Full Stack Engineer III",
+      secondaryText: "2026 onX Maps",
+    },
     {
       primaryText: "Software Engineer II",
       secondaryText: "2025 - FamilySearch",
@@ -66,16 +70,18 @@ export const featuredProjectConfig = {
   title: "SimonMQ: Message Queues from Scratch",
   tagline:
     "Message Queues designed to train storage and distributed systems fundamentals.",
-  description: `SimonMQ is a Go message broker I built from the ground up,
-    progressing from an in-memory queue to a fully WAL-backed pub/sub system with
-    crash recovery. Every operation is appended to a segmented, checksummed
-    write-ahead log before being applied in memory. On restart, the entire
-    broker state (including queues, subscribers, and in-flight delivery state) is
-    reconstructed by replaying the log in LSN order. Acks are only
-    applied in memory after the WAL append succeeds, so a crash can never
-    lose a delivery the log doesn't know about. In Progress: Raft-based replication with
-    automated Kubernetes deployment.`,
-  stack: ["Go", "Write-Ahead Logging", "Raft", "Concurrency"],
+  description: `SimonMQ is a series of Go message brokers I built from scratch,
+    progressing from an in-memory queue to a replicated, fault-tolerant
+    cluster. Durable-MQ adds a segmented, checksummed write-ahead log: after a
+    crash, the broker rebuilds its queues, subscribers, and in-flight delivery
+    state by replaying the log, and never acknowledges a delivery the log
+    doesn't know about. Dist-MQ extends that from surviving a restart to
+    surviving the loss of a machine. State is replicated across nodes with Raft,
+    a write is acknowledged only once a majority of nodes have persisted it,
+    and delivery runs on the leader and is rebuilt from replicated state on
+    failover. It deploys to Kubernetes and includes a durability suite that
+    runs while pods are killed at random.`,
+  stack: ["Go", "Raft", "Write-Ahead Logging", "Kubernetes", "Concurrency"],
   links: [
     { label: "View on GitHub", href: "https://github.com/Simon-Cheek/simonMQ" },
   ],

@@ -1,7 +1,9 @@
-// FamilySearch roles only - this is the featured, technical-experience
-// timeline shown on the Software page. The BYU School of Music role still
-// appears in the compact About-page timeline (see homeConfig.js).
 export const sweExp = [
+  {
+    title: "Full Stack Engineer III",
+    company: "OnX Maps",
+    details: ["Started Nov 2026"],
+  },
   {
     title: "Software Engineer II",
     company: "FamilySearch",
