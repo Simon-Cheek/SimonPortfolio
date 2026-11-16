@@ -19,7 +19,7 @@ export const aboutConfig = {
   timeline: [
     {
       primaryText: "Full Stack Engineer III",
-      secondaryText: "2026 onX Maps",
+      secondaryText: "2026 - onX Maps",
     },
     {
       primaryText: "Software Engineer II",
