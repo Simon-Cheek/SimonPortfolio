@@ -22,7 +22,6 @@ function Header() {
     font-size: 0.9em;
     padding: 0.1em 0 !important;
     margin: 0.2em 0.65em;
-    }
   `;
 
   const navbarAnimated = css`
